@@ -1,0 +1,3 @@
+# Keybindings
+"\C-j":history-search-backward # Ctrl-j
+"\C-k":history-search-forward  # Ctrl-i
