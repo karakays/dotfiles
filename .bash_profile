@@ -4,7 +4,6 @@
 # ENV. VARS
 
 export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
-#export PATH="/usr/local/bin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
 export JDK8="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/"
 export JAVA_HOME="$JDK8"
 export TERM=xterm-256color
@@ -18,24 +17,24 @@ export PATH
 
 # ALIASES
 
-alias sudo='sudo '                      # enable aliases to be sudo’ed
+alias sudo='sudo '                                      # enable aliases to be sudo’ed
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias ll="ls -FGlAht"                   # list with details
-alias cpd="cp -R"                       # copy directory tree
-alias rmd="rm -R"                       # rm directory tree
+alias ll="ls -FGlAht"                                   # list with details
+alias cpd="cp -R"                                       # copy directory tree
+alias rmd="rm -R"                                       # rm directory tree
 alias path="echo -e ${PATH} \
-| tr ':' '\n'"                          # echo $PATH separated by newlines
-alias grep="grep -i --color"            # colorized grep match
+| tr ':' '\n'"                                          # echo $PATH pretty
+alias grep="grep -i --color"                            # colorized grep match
 alias py2=python2.7
 alias py3=python3.5
 alias tmux_dt="tmux detach"
 alias tmux_ls="tmux list-sessions"
 alias config="/usr/bin/git \
 --git-dir=$HOME/.files/ \
---work-tree=$HOME"                      # git repository for .files
+--work-tree=$HOME"                                      # git repository for .files
 alias redis_start="sudo redis-server \
 /opt/local/etc/redis.conf &"
 alias pg95_start="sudo /opt/local/etc/
@@ -52,10 +51,9 @@ LaunchDaemons/org.macports.postgresql96-server/\
 postgresql96-server.wrapper stop"
 
 
-#       FUNCTIONS
+# FUNCTIONS
 
-# unpack known archives
-# Usage: extract <archive> [<dest>]
+# unpack known archives Usage: extract <archive> [<dest>]
 extract () {
     if [ -f "$1" ] ; then
         dest=.
