@@ -1,60 +1,55 @@
 syntax enable
-" This stupid line is necessary otherwise solarized shows ugly
-"let g:solarized_termtrans=1
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 set background=dark
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
-" solarized color scheme at ~/.vim/colors/solarized.vim
 colorscheme solarized
-" highlight searching
-set hlsearch
-" enable incremental searching
-set incsearch
-" turn on line numbers
-set nu
-" enable access to system clipboard
-set clipboard=unnamed
-set encoding=utf-8
-" enter spaces when tab is pressed
-set expandtab           
-" break lines when line length increases
-set textwidth=120       
-" use 4 spaces to represent tab
-set tabstop=4           
-set softtabstop=4
-" number of spaces to use for auto indent
-set shiftwidth=4        
-" copy indent from current line when starting a new line
-set autoindent          
 
-" split navigations
-nnoremap <C-J> <C-W><C-J>
+set nu                                                  " turn on line numbers
+set clipboard=unnamed                                   " enable access to system clipboard
+set encoding=utf-8
+set textwidth=120                                       " break lines after 120 columns
+set tabstop=4                                           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4                                        " number  of spaces to use for auto indent
+set autoindent                                          " copy indent from current line when starting a new line
+set smartindent                                         " use smart indent if there's no indent file
+set expandtab                                           " enter spaces when tab is pressed
+
+
+""" Searching
+
+set ignorecase                                          " case insensitive searching
+set hlsearch                                            " highlight searching
+set smartcase                                           " unless uppercase letters are used in the regex.
+set incsearch                                           " enable incremental searching
+filetype on                                             " detect file types
+set title                                               " show title in console bar
+set cursorline                                          " indicate cursor line
+set ruler
+set scrolloff=3                                         " keep 3 lines of context around cursor position
+
+nnoremap <C-J> <C-W><C-J>                               " windows navigations
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" tab navigation
-nnoremap <C-Left> :tabp<CR>
+nnoremap <C-Left> :tabp<CR>                             " tab navigation
 nnoremap <C-Right> :tabn<CR>
 
-" ctrlp fuzzy finder
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim                " ctrlp fuzzy finder
 set wildignore+=*.so,*.swp,*.class
 set laststatus=2
+let g:ctrlp_by_filename = 0                             " let ctrl-p to search by filename rather than path
 
-" pathogen
-execute pathogen#infect()
-set statusline+=%#warningmsg#
+execute pathogen#infect()                               
+set statusline+=%#warningmsg#                           " pathogen
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1            " syntastic
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
-"ctags
-set tags=./tags;/
+
+set tags=./tags;/                                       " ctags
