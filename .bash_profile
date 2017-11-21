@@ -11,7 +11,7 @@ export CLICOLOR=1
 export EDITOR=vim
 export VISUAL=vim
 export PS1="\[\033[1;34m\]\h:\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
-PATH="/usr/local/bin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
 export PATH
 
 
