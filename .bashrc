@@ -1,5 +1,3 @@
-# dot file for non-login interactive shells (like screen command)
+# ~/.bashrc
 
 source ~/.bash_profile
-
-
