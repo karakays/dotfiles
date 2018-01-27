@@ -13,7 +13,7 @@ set shiftwidth=4                                        " number  of spaces to u
 set autoindent                                          " copy indent from current line when starting a new line
 set smartindent                                         " use smart indent if there's no indent file
 set expandtab                                           " enter spaces when tab is pressed
-
+set number relativenumber
 
 """ Searching
 
@@ -53,3 +53,11 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 
 
 set tags=./tags;/                                       " ctags
+
+if exists('$TMUX')                                      " set cursor based on mode
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
