@@ -14,6 +14,7 @@ set autoindent                                          " copy indent from curre
 set smartindent                                         " use smart indent if there's no indent file
 set expandtab                                           " enter spaces when tab is pressed
 set number relativenumber
+set pastetoggle=<F10>                                   " toggle paste mode
 
 """ Searching
 
