@@ -16,6 +16,13 @@ set expandtab                                           " enter spaces when tab 
 set number relativenumber
 set pastetoggle=<F10>                                   " toggle paste mode
 
+
+""" Abbreviations
+
+iabbrev @@ skarakayali@gmail.com
+iabbrev nname Selçuk Karakayalı
+
+
 """ Searching
 
 set ignorecase                                          " case insensitive searching
@@ -27,6 +34,17 @@ set title                                               " show title in console 
 set cursorline                                          " indicate cursor line
 set ruler
 set scrolloff=3                                         " keep 3 lines of context around cursor position
+
+
+""" Mappings
+
+noremap <Left>  <nop>
+noremap <Right> <nop>
+noremap <Up>    <nop>
+noremap <Down>  <nop>
+
+inoremap jk <esc>                                       " exit insert mode
+inoremap <esc> <nop>                                    " force to use mapping above
 
 nnoremap <C-J> <C-W><C-J>                               " windows navigations
 nnoremap <C-K> <C-W><C-K>
@@ -51,7 +69,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-
 
 set tags=./tags;/                                       " ctags
 
