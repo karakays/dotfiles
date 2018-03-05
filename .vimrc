@@ -3,18 +3,27 @@ let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized
 
-set nu                                                  " turn on line numbers
-set clipboard=unnamed                                   " enable access to system clipboard
+" turn on line numbers
+set nu
+" enable access to system clipboard
+set clipboard=unnamed
 set encoding=utf-8
-set textwidth=120                                       " break lines after 120 columns
-set tabstop=4                                           " use 4 spaces to represent tab
+" break lines after 120 columns
+set textwidth=120
+" use 4 spaces to represent tab
+set tabstop=4
 set softtabstop=4
-set shiftwidth=4                                        " number  of spaces to use for auto indent
-set autoindent                                          " copy indent from current line when starting a new line
-set smartindent                                         " use smart indent if there's no indent file
-set expandtab                                           " enter spaces when tab is pressed
+" number  of spaces to use for auto indent
+set shiftwidth=4
+" copy indent from current line when starting a new line
+set autoindent
+" use smart indent if there's no indent file
+set smartindent
+" enter spaces when tab is pressed
+set expandtab
 set number relativenumber
-set pastetoggle=<F10>                                   " toggle paste mode
+" toggle paste mode
+set pastetoggle=<F10>                                   
 
 
 """ Abbreviations
@@ -25,54 +34,70 @@ iabbrev nname Selçuk Karakayalı
 
 """ Searching
 
-set ignorecase                                          " case insensitive searching
-set hlsearch                                            " highlight searching
-set smartcase                                           " unless uppercase letters are used in the regex.
-set incsearch                                           " enable incremental searching
-filetype on                                             " detect file types
-set title                                               " show title in console bar
-set cursorline                                          " indicate cursor line
+" case insensitive searching
+set ignorecase
+" highlight searching
+set hlsearch
+" unless uppercase letters are used in the regex.
+set smartcase
+" enable incremental searching
+set incsearch
+" detect file types
+filetype on
+" show title in console bar
+set title
+" indicate cursor line
+set cursorline
 set ruler
-set scrolloff=3                                         " keep 3 lines of context around cursor position
+" keep 3 lines of context around cursor position
+set scrolloff=3
 
 
 """ Mappings
 
-noremap <Left>  <nop>
-noremap <Right> <nop>
+noremap <Left>   <nop>
+noremap <Right>  <nop>
 noremap <Up>    <nop>
 noremap <Down>  <nop>
 
-inoremap jk <esc>                                       " exit insert mode
-inoremap <esc> <nop>                                    " force to use mapping above
+" exit insert mode
+inoremap jk      <esc>
+inoremap <esc>  <nop>
 
-nnoremap <C-J> <C-W><C-J>                               " windows navigations
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" windows navigation
+nnoremap <C-J> <C-W>J
+nnoremap <C-K> <C-w>K
+nnoremap <C-L> <C-W>L
+nnoremap <C-H> <C-W>H
 
-nnoremap <C-Left> :tabp<CR>                             " tab navigation
-nnoremap <C-Right> :tabn<CR>
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim                " ctrlp fuzzy finder
+autocmd InsertLeave * :echo 'Left insert mode'
+
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*.so,*.swp,*.class
 set laststatus=2
-let g:ctrlp_by_filename = 0                             " let ctrl-p to search by filename rather than path
+" let ctrl-p to search by filename rather than path
+let g:ctrlp_by_filename = 0
 
+" pathogen
 execute pathogen#infect()                               
-set statusline+=%#warningmsg#                           " pathogen
+set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1            " syntastic
+" syntastic
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
-set tags=./tags;/                                       " ctags
+" ctags
+set tags=./tags;/
 
-if exists('$TMUX')                                      " set cursor based on mode
+" set cursor based on mode
+if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 else
