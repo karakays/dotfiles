@@ -51,7 +51,7 @@ set title
 " indicate cursor line
 set cursorline
 set ruler
-" keep 3 lines of context around cursor position
+" lines of context around cursor position
 set scrolloff=3
 
 
@@ -62,7 +62,6 @@ noremap <Right> <nop>
 noremap <Up>    <nop>
 noremap <Down>  <nop>
 
-" exit insert mode
 inoremap jk    <esc>
 inoremap <esc> <nop>
 
@@ -73,24 +72,6 @@ nnoremap <C-L> <C-W>L
 nnoremap <C-H> <C-W>H
 
 autocmd InsertLeave * :echo 'Left insert mode'
-
-" CtrlP settings
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.so,*.swp,*.class
-set laststatus=2
-" let ctrl-p to search by filename rather than path
-let g:ctrlp_by_filename = 0
-
-" Syntastic settings ---------------------- {{{
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_mode_map={ 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-" }}}
 
 " ctags
 set tags=./tags;/
@@ -103,6 +84,25 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+" CtrlP settings ---------------------- {{{
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*.so,*.swp,*.class
+set laststatus=2
+" let ctrl-p to search by filename rather than path
+let g:ctrlp_by_filename = 0
+" }}}
+
+" Syntastic settings ---------------------- {{{
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_mode_map={ 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" }}}
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
