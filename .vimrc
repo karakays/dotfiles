@@ -1,10 +1,8 @@
-syntax enable
-let g:solarized_termcolors=16
-set background=dark
-colorscheme solarized
+""" UI settings
 
-" turn on line numbers
-set nu
+set background=dark
+" turn on relative line numbers
+set number relativenumber
 " enable access to system clipboard
 set clipboard=unnamed
 set encoding=utf-8
@@ -21,9 +19,13 @@ set autoindent
 set smartindent
 " enter spaces when tab is pressed
 set expandtab
-set number relativenumber
 " toggle paste mode
 set pastetoggle=<F10>                                   
+" visual auto-complete menu
+set wildmenu
+let g:solarized_termcolors=16
+colorscheme solarized
+syntax enable
 
 
 """ Abbreviations
@@ -42,8 +44,8 @@ set hlsearch
 set smartcase
 " enable incremental searching
 set incsearch
-" detect file types
-filetype on
+" detect file type and indent
+filetype indent on
 " show title in console bar
 set title
 " indicate cursor line
@@ -55,14 +57,14 @@ set scrolloff=3
 
 """ Mappings
 
-noremap <Left>   <nop>
-noremap <Right>  <nop>
+noremap <Left>  <nop>
+noremap <Right> <nop>
 noremap <Up>    <nop>
 noremap <Down>  <nop>
 
 " exit insert mode
-inoremap jk      <esc>
-inoremap <esc>  <nop>
+inoremap jk    <esc>
+inoremap <esc> <nop>
 
 " windows navigation
 nnoremap <C-J> <C-W>J
@@ -70,28 +72,25 @@ nnoremap <C-K> <C-w>K
 nnoremap <C-L> <C-W>L
 nnoremap <C-H> <C-W>H
 
-
 autocmd InsertLeave * :echo 'Left insert mode'
 
-" ctrlp
+" CtrlP settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*.so,*.swp,*.class
 set laststatus=2
 " let ctrl-p to search by filename rather than path
 let g:ctrlp_by_filename = 0
 
-" pathogen
-execute pathogen#infect()                               
+" Syntastic settings ---------------------- {{{
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_mode_map={ 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" }}}
 
 " ctags
 set tags=./tags;/
@@ -104,3 +103,13 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" Pathogen
+execute pathogen#infect()                               
