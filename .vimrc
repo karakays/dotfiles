@@ -1,6 +1,5 @@
 """ UI settings
 
-set background=dark
 " turn on relative line numbers
 set number relativenumber
 " enable access to system clipboard
@@ -21,18 +20,17 @@ set smartindent
 set expandtab
 " toggle paste mode
 set pastetoggle=<F10>                                   
+" always show status bar
+set laststatus=2
 " visual auto-complete menu
 set wildmenu
+
+" Colorscheme
+
+set background=dark
 let g:solarized_termcolors=16
 colorscheme solarized
 syntax enable
-
-
-""" Abbreviations
-
-iabbrev @@ skarakayali@gmail.com
-iabbrev nname Selçuk Karakayalı
-
 
 """ Searching
 
@@ -54,7 +52,6 @@ set ruler
 " lines of context around cursor position
 set scrolloff=3
 
-
 """ Mappings
 
 noremap <Left>  <nop>
@@ -70,6 +67,18 @@ nnoremap <C-J> <C-W>J
 nnoremap <C-K> <C-w>K
 nnoremap <C-L> <C-W>L
 nnoremap <C-H> <C-W>H
+
+""" Leader
+let mapleader=","
+
+
+""" Quick editing
+nnoremap <leader>ev :split ~/.vimrc<cr>
+
+""" Abbreviations
+
+iabbrev @@ skarakayali@gmail.com
+iabbrev nname Selçuk Karakayalı
 
 autocmd InsertLeave * :echo 'Left insert mode'
 
@@ -88,8 +97,7 @@ endif
 " CtrlP settings ---------------------- {{{
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*.so,*.swp,*.class
-set laststatus=2
-" let ctrl-p to search by filename rather than path
+" search by filename rather than path
 let g:ctrlp_by_filename = 0
 " }}}
 
