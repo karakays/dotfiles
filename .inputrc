@@ -1,3 +1,4 @@
-# Keybindings
-"\C-j":history-search-backward # Ctrl-j
-"\C-k":history-search-forward  # Ctrl-i
+# ~/.inputrc
+
+"\C-j":history-search-backward
+"\C-k":history-search-forward
