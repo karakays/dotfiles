@@ -1,0 +1,9 @@
+\set ON_ERROR_ROLLBACK interactive
+\set COMP_KEYWORD_CASE upper
+\set HISTFILE ~/.psql/history- :DBNAME
+
+\pset pager on
+\pset null '∅'
+
+\set PROMPT1 '%[%033[1;34m%]%M:%> %n@%/%R%#%x%[%033[0m%] '
+\timing

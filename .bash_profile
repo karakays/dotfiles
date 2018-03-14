@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # $HOME/.bash_profle
 
 
@@ -14,6 +16,9 @@ export PS1="\[\033[1;34m\]\h:\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 PATH="/usr/local/bin:/usr/local/sbin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
 export PATH
 export GPG_TTY=$(tty)
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.vim/.vimrc'
+export PGPASSFILE='~/.psql/.pgpass'
 
 # ALIASES
 
@@ -95,13 +100,12 @@ if [ -f ~/.local/bin/git-complete ]; then
 	source ~/.local/bin/git-complete
 fi
 
-# read postgres hosts file
-if [ -f ~/.pghosts ]; then
-	source ~/.pghosts
+# let git commands auto-complete
+if [ -f ~/.psql/.pghosts ]; then
+	source ~/.psql/.pghosts
 fi
 
 source ~/.alias
-
 
 # exec tmux
 if command -v tmux>/dev/null; then

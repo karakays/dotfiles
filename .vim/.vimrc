@@ -68,9 +68,17 @@ nnoremap <C-K> <C-w>K
 nnoremap <C-L> <C-W>L
 nnoremap <C-H> <C-W>H
 
+" Save
+nnoremap s :w<cr>
+
+" Quit
+nnoremap q :q<cr>
+
+" Blank lines
+nnoremap <cr> o<esc>
+
 """ Leader
 let mapleader=","
-
 
 """ Quick editing
 nnoremap <leader>ev :split ~/.vimrc<cr>
