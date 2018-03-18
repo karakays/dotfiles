@@ -1,4 +1,9 @@
 # ~/.inputrc
 
-"\C-j":history-search-backward
-"\C-k":history-search-forward
+set editing-mode vi
+
+$if mode=vi
+    set keymap vi-insert
+    # exit insert mode
+    "jk": vi-movement-mode
+$endif

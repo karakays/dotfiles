@@ -81,7 +81,10 @@ nnoremap <cr> o<esc>
 let mapleader=","
 
 """ Quick editing
-nnoremap <leader>ev :split ~/.vimrc<cr>
+nnoremap <leader>ev :split ~/.vim/.vimrc<cr>
+
+""" Syntax check
+nnoremap <leader>s :SyntasticCheck<cr>
 
 """ Abbreviations
 
