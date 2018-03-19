@@ -107,7 +107,7 @@ fi
 
 source ~/.alias
 
-# exec tmux
+# start tmux
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec -a 'source-file ~/.tmux/.tmux.conf' tmux
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] &&  exec tmux -v -f ~/.tmux/.tmux.conf
 fi
