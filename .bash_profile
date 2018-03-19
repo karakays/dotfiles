@@ -16,9 +16,10 @@ export PS1="\[\033[1;34m\]\h:\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 PATH="/usr/local/bin:/usr/local/sbin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
 export PATH
 export GPG_TTY=$(tty)
-export VIMINIT='source $MYVIMRC'
-export MYVIMRC='~/.vim/.vimrc'
-export PGPASSFILE='~/.psql/.pgpass'
+export MYVIMRC="$HOME/.vim/.vimrc"
+export VIMINIT="source $MYVIMRC"
+export PGPASSFILE="$HOME/.psql/.pgpass"
+export TMUXCONF="$HOME/.tmux/.tmux.conf"
 
 # ALIASES
 
@@ -105,9 +106,10 @@ if [ -f ~/.psql/.pghosts ]; then
 	source ~/.psql/.pghosts
 fi
 
-source ~/.alias
 
-# start tmux
+# init tmux
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] &&  exec tmux -v -f ~/.tmux/.tmux.conf
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -f $TMUXCONF
 fi
+
+source ~/.alias
