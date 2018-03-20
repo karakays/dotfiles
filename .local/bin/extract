@@ -1,6 +1,7 @@
-#!/usr/bin/env/ bash
+#!/usr/bin/env bash
 
-# unpack known archives Usage: extract <archive> [<dest>]
+# Unpack known archives
+# Usage: extract <archive> [<dest>]
 
 if [ -f "$1" ] ; then
     dest=.
@@ -30,4 +31,3 @@ else
     echo "extract: $1 is not a valid file"
     return 1
 fi
-

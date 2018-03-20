@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2018 Selçuk Karakayalı <skarakayali@gmail.com>
+# Applies <licence> header to each file matching the <glob>
+# starting from the current working directory recursively.
+
+# usage: licence <license_file> <glob>
+
+if [ $# -ne 2 ] ; then
+    echo "licence: usage: licence <file> <glob>"
+    exit 1
+elif [ ! -f "$1" ] ; then
+    echo "licence: licence $1 does not exist."
+    exit 1
+fi
+
+licence=$(<"$1")
+licence_len=$(cat "$1" | wc -l) 
+comment="#"
+
+for f in $(find . -name "$2");
+do
+    file_header=$(head -n "$licence_len" "$f")
+    header=$(echo "$licence" | sed -e "s/^/$comment /")
+    if [ "$header" != "$file_header" ]
+    then
+        echo "licence: Adding header to $f"
+        echo "$header" | cat - "$f" > "$f".new && mv "$f".new "$f"
+    fi
+done
