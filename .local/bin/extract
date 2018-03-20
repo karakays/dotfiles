@@ -1,0 +1,33 @@
+#!/usr/bin/env/ bash
+
+# unpack known archives Usage: extract <archive> [<dest>]
+
+if [ -f "$1" ] ; then
+    dest=.
+    if [ ! -z "$2" ] ; then
+        if [ -d "$2" ] ; then
+            dest="$2"
+        else
+            echo "extract: $2 directory does not exist"
+            return 1
+        fi
+    fi
+    case $1 in
+        *.tar.bz2)   tar xvjf "$1"    ;;
+        *.tar.gz)    tar xvzf "$1" -C "$dest";;
+        *.bz2)       bunzip2 "$1"     ;;
+        *.rar)       unrar x "$1"     ;;
+        *.gz)        gunzip "$1"      ;;
+        *.tar)       tar xvf "$1" -C "$dest" ;;
+        *.tbz2)      tar xvjf "$1"    ;;
+        *.tgz)       tar xvzf "$1"    ;;
+        *.zip)       unzip "$1" -d "$dest"   ;;
+        *.Z)         uncompress "$1"  ;;
+        *.7z)        7z x  "$1"        ;;
+        *)           echo "extract: $1 can't be extracted" ;;
+    esac
+else
+    echo "extract: $1 is not a valid file"
+    return 1
+fi
+
