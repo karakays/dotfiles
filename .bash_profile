@@ -3,6 +3,10 @@
 # $HOME/.bash_profle
 
 
+for file in ~/.{alias,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
 # ENV. VARS
 
 export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
@@ -56,11 +60,6 @@ alias pg96_stop="sudo  /opt/local/etc/\
 LaunchDaemons/org.macports.postgresql96-server/\
 postgresql96-server.wrapper stop"
 
-# put git branch in prompt
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # let git commands auto-complete
 if [ -f ~/.local/bin/git-complete ]; then
 	source ~/.local/bin/git-complete
@@ -75,5 +74,3 @@ fi
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -f $TMUXCONF
 fi
-
-source ~/.alias
