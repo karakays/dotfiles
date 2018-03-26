@@ -74,7 +74,7 @@ nnoremap s :w<cr>
 " Quit
 nnoremap q :q<cr>
 
-" Blank lines
+" Blank lines on enter
 nnoremap <cr> o<esc>
 
 """ Leader
