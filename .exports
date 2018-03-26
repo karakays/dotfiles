@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# $HOME/.exports
+
+export TERM=xterm-256color
+export CLICOLOR=1
+export EDITOR=vim
+export VISUAL=vim
+export PS1="\[\033[1;34m\]\h:\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
+PATH="/usr/local/bin:/usr/local/sbin:~/.local/bin:/opt/local/bin:/opt/local/sbin:$MAVEN:$PATH"
+export PATH
+export GPG_TTY=$(tty)
+export MYVIMRC="$HOME/.vim/.vimrc"
+export VIMINIT="source $MYVIMRC"
+export PGPASSFILE="$HOME/.psql/.pgpass"
+export TMUXCONF="$HOME/.tmux/.tmux.conf"
+export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
+export JDK8="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/"
+export JAVA_HOME="$JDK8"
