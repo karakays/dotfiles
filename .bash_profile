@@ -6,13 +6,9 @@ for file in ~/.{aliases,exports,functions}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
-if [ -f ~/.local/bin/git-complete ]; then
-	source ~/.local/bin/git-complete
-fi
+[ -f ~/.local/bin/git-complete ] && source ~/.local/bin/git-complete
 
-if [ -f ~/.psql/.pghosts ]; then
-	source ~/.psql/.pghosts
-fi
+[ -f ~/.psql/.pghosts ] && source ~/.psql/.pghosts
 
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -f $TMUXCONF
