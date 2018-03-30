@@ -5,9 +5,9 @@
 	editor = vim
 	excludesfile = /Users/karakays/.gitrc/.gitignore_global
 [commit]
-	template = /Users/karakays/.gitrc/.stCommitMsg
+    template = /Users/karakays/.gitrc/.stCommitMsg
 [alias]
-    hist = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
 [color]
 	ui = true
