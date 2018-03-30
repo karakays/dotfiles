@@ -43,7 +43,7 @@ set smartcase
 " enable incremental searching
 set incsearch
 " detect file type and indent
-filetype indent on
+filetype plugin indent on
 " show title in console bar
 set title
 " indicate cursor line
@@ -51,6 +51,7 @@ set cursorline
 set ruler
 " lines of context around cursor position
 set scrolloff=3
+set viminfo+=n~/.vim/.viminfo
 
 """ Mappings
 
@@ -74,6 +75,10 @@ nnoremap s :w<cr>
 " Quit
 nnoremap q :q<cr>
 
+
+" Soft quit
+nnoremap Q :q!<cr>
+
 " Blank lines on enter
 nnoremap <cr> o<esc>
 
@@ -84,10 +89,28 @@ let mapleader=","
 nnoremap <leader>ev :split ~/.vim/.vimrc<cr>
 
 """ Syntax check
-nnoremap <leader>s :SyntasticCheck<cr>
+nnoremap <leader>C :SyntasticCheck<cr>
+
+
+" NERD Tree {{{
+noremap  <leader>nt :NERDTreeToggle<cr>
+inoremap <leader>nt <esc>:NERDTreeToggle<cr>
+noremap  <leader>nf :NERDTreeFind<cr>
+inoremap <leader>nf <esc>:NERDTreeFind<cr>
+
+let NERDTreeHighlightCursorline = 1
+let NERDTreeIgnore = ['\~$', '.*\.pyc$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" }}}
+
+" Python-Mode {{{
+let g:pymode_python = 'python3'
+
+" }}}
 
 """ Abbreviations
-
 iabbrev @@ skarakayali@gmail.com
 iabbrev nname Selçuk Karakayalı
 
@@ -130,5 +153,10 @@ augroup filetype_vim
 augroup END
 " }}}
 
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = []
+
+" disable python-mode
+" call add(g:pathogen_disabled, 'python-mode')
 " Pathogen
-execute pathogen#infect()                               
+execute pathogen#infect()
