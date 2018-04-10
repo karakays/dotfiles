@@ -110,6 +110,14 @@ let g:pymode_python = 'python3'
 
 " }}}
 
+
+" Fugitive {{{
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gci :Gcommit<cr>
+
+" }}}
+
 """ Abbreviations
 iabbrev @@ skarakayali@gmail.com
 iabbrev nname Selçuk Karakayalı
