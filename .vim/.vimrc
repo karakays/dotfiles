@@ -60,6 +60,9 @@ noremap <Right> <nop>
 noremap <Up>    <nop>
 noremap <Down>  <nop>
 
+nnoremap 0 ^
+noremap $ g_
+
 inoremap jk    <esc>
 inoremap <esc> <nop>
 
@@ -74,7 +77,6 @@ nnoremap s :w<cr>
 
 " Quit
 nnoremap q :q<cr>
-
 
 " Soft quit
 nnoremap Q :q!<cr>
