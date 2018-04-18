@@ -18,3 +18,6 @@ export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
 export JDK8="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/"
 export JAVA_HOME="$JDK8"
 export GIT_CONFIG="$HOME/.gitrc/.gitconfig"
+export HISTFILE="$HOME/.history/.bash_history"
+export HISTFILESIZE=2000
+export HISTSIZE=1000
