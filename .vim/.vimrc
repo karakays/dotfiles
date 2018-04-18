@@ -24,6 +24,10 @@ set pastetoggle=<F10>
 set laststatus=2
 " visual auto-complete menu
 set wildmenu
+" swap directory
+set directory=~/.vim/swap//
+" backup directory
+set backupdir=~/.vim/backup//
 
 " Colorscheme
 
@@ -60,6 +64,7 @@ noremap <Right> <nop>
 noremap <Up>    <nop>
 noremap <Down>  <nop>
 
+" start/end of line
 nnoremap 0 ^
 noremap $ g_
 
