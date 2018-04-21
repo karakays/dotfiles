@@ -92,6 +92,8 @@ nnoremap <cr> o<esc>
 """ Leader
 let mapleader=","
 
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+
 """ Quick editing
 nnoremap <leader>ev :split ~/.vim/.vimrc<cr>
 
@@ -171,7 +173,7 @@ augroup END
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
 
-" disable python-mode
-" call add(g:pathogen_disabled, 'python-mode')
+" disable grep-op 
+call add(g:pathogen_disabled, 'grep-op')
 " Pathogen
 execute pathogen#infect()
