@@ -7,7 +7,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias ll="ls -FGlAht"                                   # list with details
+alias ll="ls -FGlAht --color=auto"                      # list with details
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -R"                                       # rm directory tree
 alias path="echo -e ${PATH} \
@@ -18,7 +18,7 @@ alias py3=python3.5
 alias tmux_dt="tmux detach"
 alias tmux_ls="tmux list-sessions"
 alias config="/usr/bin/git \
---git-dir=$HOME/.files/ \
+--git-dir=$HOME/.cfg/ \
 --work-tree=$HOME"                                      # git repository for .files
 alias redis_start="sudo redis-server \
 /opt/local/etc/redis.conf &"
