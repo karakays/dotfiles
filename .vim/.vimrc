@@ -3,7 +3,7 @@
 " turn on relative line numbers
 set number relativenumber
 " enable access to system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 set encoding=utf-8
 " break lines after 120 columns
 set textwidth=120
@@ -31,9 +31,10 @@ set backupdir=~/.vim/backup//
 
 " Colorscheme
 
-set background=dark
-let g:solarized_termcolors=16
+let g:solarized_termcolors=256
+set t_Co=256
 colorscheme solarized
+set background=dark
 syntax enable
 
 """ Searching
