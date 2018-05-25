@@ -6,7 +6,7 @@
 	excludesfile = .gitignore_global
 	autocrlf = false
 [commit]
-    template = /Users/karakays/.gitrc/.stCommitMsg
+    template = .stCommitMsg
 [alias]
     logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
