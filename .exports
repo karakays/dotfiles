@@ -3,6 +3,8 @@
 # $HOME/.exports
 
 export TERM=xterm-256color
+export BASH="/usr/local/bin/bash"
+export SHELL="$BASH"
 export CLICOLOR=1
 export EDITOR=vim
 export VISUAL=vim
