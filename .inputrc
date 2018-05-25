@@ -1,14 +1,11 @@
-#!/usr/bin/env bash
-
 # ~/.inputrc
 
 set editing-mode vi
 
 $if mode=vi
-    set show-mode-in-prompt on
+    set show-mode-in-prompt
     set keymap vi-insert
-    set vi-ins-mode-string \1\e[6 q\2
-    set vi-cmd-mode-string \1\e[2 q\2
-    # exit insert mode
+    set vi-ins-mode-string "\1\e[6 q\2"
+    set vi-cmd-mode-string "\1\e[2 q\2
     "jk": vi-movement-mode
 $endif
