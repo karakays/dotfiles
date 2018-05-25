@@ -3,7 +3,8 @@
 	name = Selçuk Karakayalı
 [core]
 	editor = vim
-	excludesfile = /Users/karakays/.gitrc/.gitignore_global
+	excludesfile = .gitignore_global
+	autocrlf = false
 [commit]
     template = /Users/karakays/.gitrc/.stCommitMsg
 [alias]
