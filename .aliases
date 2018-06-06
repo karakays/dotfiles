@@ -7,12 +7,13 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias ll="ls -FGlAht --color=auto"                      # list with details
+alias ll="ls -FGlAhto"                                  # list with details
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -R"                                       # rm directory tree
 alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # echo $PATH pretty
 alias grep="grep -i --color"                            # colorized grep match
+alias dus="du -sh | cut -f1"
 alias py2=python2.7
 alias py3=python3.5
 alias tmux_dt="tmux detach"
