@@ -16,14 +16,25 @@ alias grep="grep -i --color"                            # colorized grep match
 alias dus="du -sh | cut -f1"
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
+alias topm="top -o rsize"
+alias topc="top -o cpu"
+alias cpwd="pwd | pbcopy"
+alias cl="fc -e - | pbcopy"                             # copy output of last cmd
+
+# VCS
+
+alias config="/usr/bin/git \
+--git-dir=$HOME/.cfg/ \
+--work-tree=$HOME"                                      # git repository for .files
+
+# APPS
+
+>>>>>>> 12e753458b50f401ab61e2dfbd8e55cc21670cac
 alias py2=python2.7
 alias py3=python3.5
 alias tmux="tmux -f $TMUXCONF"
 alias tmux_dt="tmux detach"
 alias tmux_ls="tmux list-sessions"
-alias config="/usr/bin/git \
---git-dir=$HOME/.cfg/ \
---work-tree=$HOME"                                      # git repository for .files
 alias redis_start="sudo redis-server \
 /opt/local/etc/redis.conf &"
 alias pg95_start="sudo /opt/local/etc/
