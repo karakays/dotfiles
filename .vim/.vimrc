@@ -31,11 +31,12 @@ set backupdir=~/.vim/backup//
 
 " Colorscheme
 
-let g:solarized_termcolors=256
-set t_Co=256
-colorscheme solarized
-set background=dark
+"set t_Co=256
 syntax enable
+let g:solarized_termtrans=1
+"let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
 
 """ Searching
 
@@ -89,6 +90,12 @@ nnoremap Q :q!<cr>
 
 " Blank lines on enter
 nnoremap <cr> o<esc>
+
+" copy to clipboard
+vnoremap <C-c> :w !pbcopy<CR><CR>
+
+" paste
+inoremap <C-v> :r !pbpaste<CR><CR>
 
 """ Leader
 let mapleader=","
