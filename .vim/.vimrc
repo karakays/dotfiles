@@ -31,12 +31,11 @@ set backupdir=~/.vim/backup//
 
 " Colorscheme
 
-"set t_Co=256
+set t_Co=256
 syntax enable
 let g:solarized_termtrans=1
-"let g:solarized_termcolors=16
 set background=dark
-colorscheme solarized
+colorscheme tango
 
 """ Searching
 
