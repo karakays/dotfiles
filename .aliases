@@ -29,7 +29,6 @@ alias config="/usr/bin/git \
 
 # APPS
 
->>>>>>> 12e753458b50f401ab61e2dfbd8e55cc21670cac
 alias py2=python2.7
 alias py3=python3.5
 alias tmux="tmux -f $TMUXCONF"
