@@ -3,7 +3,6 @@
 if hash free 2>/dev/null; then
     free -m | awk 'NR==2{printf "%s/%sMB", $3,$2 }'
 elif hash vm_stat 2>/dev/null; then
-    vm_stat
     echo "$(( $(vm_stat 2>/dev/null | awk '/free/ {gsub(/\./, "", $3); print $3}') * 4096 / 1048576)) MiB"
 else
     echo >&2 "Neither free nor vm_stat is installed, aborting."
