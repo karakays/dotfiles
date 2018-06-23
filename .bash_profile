@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# $HOME/.bash_profle
+echo ".bash_profile running"
 
 for file in ~/.{aliases,exports,functions}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -10,6 +10,7 @@ done;
 
 [ -f ~/.psql/.pghosts ] && source ~/.psql/.pghosts
 
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -f $TMUXCONF
-fi
+PNAME="$(ps -o comm= $PPID)";
+
+# exec tmux from terminal process only
+[ "$PNAME" == "gnome-terminal-" ] && command -v tmux>/dev/null && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -f $TMUXCONF
