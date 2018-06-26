@@ -14,12 +14,13 @@ alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # echo $PATH pretty
 alias grep="grep -i --color"                            # colorized grep match
 alias dus="du -sh | cut -f1"
-alias pbcopy="xclip -selection clipboard"
-alias pbpaste="xclip -selection clipboard -o"
+alias pbcopy=$(hash pbcopy 2>/dev/null && echo "pbcopy" || echo "xclip -selection clipboard")
+alias pbpaste=$(hash pbpaste 2>/dev/null && echo "pbpaste" || echo "xclip -selection clipboard -o")
 alias topm="top -o rsize"
 alias topc="top -o cpu"
 alias cpwd="pwd | pbcopy"
 alias cl="fc -e - | pbcopy"                             # copy output of last cmd
+
 
 # VCS
 
