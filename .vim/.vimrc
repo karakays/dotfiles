@@ -31,11 +31,10 @@ set backupdir=~/.vim/backup//
 
 " Colorscheme
 
-set t_Co=256
 syntax enable
 let g:solarized_termtrans=1
 set background=dark
-colorscheme tango
+colorscheme solarized
 
 """ Searching
 
@@ -125,7 +124,6 @@ let NERDTreeDirArrows = 1
 let g:pymode_python = 'python3'
 
 " }}}
-
 
 " Fugitive {{{
 nnoremap <leader>gd :Gdiff<cr>
