@@ -1,8 +1,9 @@
 # My dotfiles
 
-![terminal](https://lh4.googleusercontent.com/sq8hcDB01F2lD0j4x05QmIZ1dIoOTiosd2F4jO9tS3lIHEDGkQtN8vo8b5bLgNB9z5Md4GtTDCJ1mg=w1440-h807-rw)
+![terminal](https://drive.google.com/uc?id=1Nfdq6LHYmFPNEgDWbl2FUn24rly4jyJE)
 
-Currently running in Ubuntu 18.04 LTS and macOS High Sierra.
+
+Currently running in Ubuntu 18.04 and macOS High Sierra.
 
 ## Feedback
 
