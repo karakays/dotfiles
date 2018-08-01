@@ -44,7 +44,10 @@ if has("unix")
     if has("mac")
         colorscheme solarized
     else
-        colorscheme tango
+        colorscheme desert
+        autocmd FileType python colorscheme desert
+        autocmd FileType java colorscheme zellner
+        hi Search ctermbg=LightCyan
     endif
 endif
 
