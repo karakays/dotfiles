@@ -6,9 +6,11 @@
 	excludesfile = .gitignore_global
 	autocrlf = false
 [commit]
-    template = .stCommitMsg
+    template = ~/.gitrc/.stCommitMsg
 [alias]
     logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
 [color]
 	ui = true
+[credential]
+	helper = cache --timeout=3600
