@@ -1,14 +1,14 @@
+let s:uname = system("echo -n $(uname -s)")
+
 """ UI settings
 
 " turn on relative line numbers
 set number relativenumber
 " enable access to system clipboard
-if has("unix")
-    if has("mac")
-        set clipboard=unnamed
-    else
-        set clipboard=unnamedplus
-    endif
+if s:uname == "Darwin"
+    set clipboard=unnamed
+else
+    set clipboard=unnamedplus
 endif
 set encoding=utf-8
 " break lines after 120 columns
@@ -40,15 +40,13 @@ set backupdir=~/.vim/backup//
 syntax enable
 let g:solarized_termtrans=1
 set background=dark
-if has("unix")
-    if has("mac")
-        colorscheme solarized
-    else
-        colorscheme desert
-        autocmd FileType python colorscheme desert
-        autocmd FileType java colorscheme zellner
-        hi Search ctermbg=LightCyan
-    endif
+if s:uname == "Darwin"
+    colorscheme solarized
+else
+    colorscheme desert
+    autocmd FileType python colorscheme desert
+    autocmd FileType java colorscheme zellner
+    hi Search ctermbg=LightCyan
 endif
 
 """ Searching
