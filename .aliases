@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
-# $HOME/.aliases
-
 alias sudo='sudo '                                      # enable aliases to be sudo’ed
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias ll="ls -FGlahto"                                  # list with details
+alias ll="ls -FGlahto --color=auto"
 alias cpd="cp -R"                                       # copy directory tree
-alias rmd="rm -R"                                       # rm directory tree
+alias rmd="rm -rfv"
 alias path="echo -e ${PATH} \
-| tr ':' '\n'"                                          # echo $PATH pretty
+| tr ':' '\n'"                                          # pretty PATH 
 alias grep="grep -i --color"                            # colorized grep match
 alias dus="du -sh | cut -f1"
 alias pbcopy=$(hash pbcopy 2>/dev/null \
@@ -29,6 +27,16 @@ alias cl="fc -e - | pbcopy"                             # copy output of last cm
 alias config="/usr/bin/git \
 --git-dir=$HOME/.cfg/ \
 --work-tree=$HOME"                                      # git repository for .files
+
+
+# OS-SPECIFIC
+
+os=$(uname -s)
+
+if [ "$os" == "Linux" ]; then
+    alias gno="gnome-open ."
+    alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
+fi
 
 # APPS
 
