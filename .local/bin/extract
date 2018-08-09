@@ -51,7 +51,7 @@ case $1 in
         7z x  "$1"
         ;;
     *)
-        echo "extract: $1 can't be extracted"
+        echo "extract: "$1" can't be extracted"
         exit 1
         ;;
 esac
