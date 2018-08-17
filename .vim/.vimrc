@@ -109,7 +109,7 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 inoremap <C-v> :r !pbpaste<CR><CR>
 
 """ Leader
-let mapleader=","
+let mapleader="/"
 
 nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 
