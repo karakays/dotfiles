@@ -5,12 +5,12 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias ll="ls -FGlahto --color=auto"
+alias ll="ls -FGlahto"
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -rfv"
 alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # pretty PATH 
-alias grep="grep -i --color"                            # colorized grep match
+alias grep="grep -in --color"                           # ignore-case with line number
 alias dus="du -sh | cut -f1"
 alias pbcopy=$(hash pbcopy 2>/dev/null \
 && echo "pbcopy" || echo "xclip -selection clipboard")
@@ -36,6 +36,7 @@ os=$(uname -s)
 if [ "$os" == "Linux" ]; then
     alias gno="gnome-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
+    alias ll="ls -FGlahto --color=auto"
 fi
 
 # APPS
