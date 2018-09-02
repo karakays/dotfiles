@@ -10,6 +10,9 @@ if s:uname == "Darwin"
 else
     set clipboard=unnamedplus
 endif
+
+
+
 set encoding=utf-8
 " break lines after 120 columns
 set textwidth=120
@@ -107,6 +110,11 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 
 " paste
 inoremap <C-v> :r !pbpaste<CR><CR>
+
+" clear hightlighting last search
+nnoremap <leader><CR> :noh<CR><CR>
+
+nnoremap D d$
 
 """ Leader
 let mapleader="\\"
