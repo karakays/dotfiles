@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/python-mode"]
+	path = .vim/bundle/python-mode
+	url = https://github.com/python-mode/python-mode
