@@ -138,6 +138,7 @@ let NERDTreeHighlightCursorline = 1
 let NERDTreeIgnore = ['\~$', '.*\.pyc$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeShowHidden = 1
 
 " }}}
 
