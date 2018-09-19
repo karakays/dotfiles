@@ -82,6 +82,7 @@ noremap <Down>  <nop>
 nnoremap 0 ^
 noremap  $ g_
 
+" toggle mode
 inoremap jk    <esc>
 inoremap <esc> <nop>
 
