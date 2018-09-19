@@ -13,6 +13,7 @@ export GPG_TTY=$(tty)
 export MYVIMRC="$HOME/.vim/.vimrc"
 export VIMINIT="source $MYVIMRC"
 export PGPASSFILE="$HOME/.psql/.pgpass"
+export PSQLRC="$HOME/.psql/.psqlrc"
 export TMUXHOME="$HOME/.tmux"
 export TMUXCONF="$TMUXHOME/.tmux.conf"
 export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
