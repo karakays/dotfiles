@@ -11,8 +11,6 @@ else
     set clipboard=unnamedplus
 endif
 
-
-
 set encoding=utf-8
 " break lines after 120 columns
 set textwidth=120
@@ -82,7 +80,7 @@ noremap <Down>  <nop>
 
 " start/end of line
 nnoremap 0 ^
-noremap $ g_
+noremap  $ g_
 
 inoremap jk    <esc>
 inoremap <esc> <nop>
