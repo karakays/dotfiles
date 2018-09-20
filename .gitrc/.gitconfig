@@ -1,6 +1,7 @@
 [user]
 	email = skarakayali@gmail.com
 	name = Selçuk Karakayalı
+	signingkey = E55AE9FA4F0EB833
 [core]
 	editor = vim
 	excludesfile = .gitignore_global
@@ -8,6 +9,7 @@
 [commit]
     template = ~/.gitrc/.stCommitMsg
 [alias]
+    commit = commit -S
     logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
 [color]
