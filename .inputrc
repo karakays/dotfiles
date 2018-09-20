@@ -2,10 +2,19 @@
 
 set editing-mode vi
 
+# cut the noise
+set bell-style none
+
+# tab auto-comlete ignore-case
+set completion-ignore-case on
+
+# intelligent auto-complete
+set skip-completed-text on
+
 $if mode=vi
     set show-mode-in-prompt
     set keymap vi-insert
     set vi-ins-mode-string "\1\e[6 q\2"
-    set vi-cmd-mode-string "\1\e[2 q\2
+    set vi-cmd-mode-string "\1\e[2 q\2"
     "jk": vi-movement-mode
 $endif
