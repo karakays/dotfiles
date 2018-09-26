@@ -110,7 +110,7 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 " paste
 inoremap <C-v> :r !pbpaste<CR><CR>
 
-" clear hightlighting last search
+" clear hlsearch
 nnoremap <leader><CR> :noh<CR><CR>
 
 nnoremap D d$
