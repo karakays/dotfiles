@@ -134,6 +134,7 @@ noremap  <leader>nt :NERDTreeToggle<cr>
 inoremap <leader>nt <esc>:NERDTreeToggle<cr>
 noremap  <leader>nf :NERDTreeFind<cr>
 inoremap <leader>nf <esc>:NERDTreeFind<cr>
+noremap  <leader>nr :NERDTreeFocus<cr>R<c-w><c-p>
 
 let NERDTreeHighlightCursorline = 1
 let NERDTreeIgnore = ['\~$', '.*\.pyc$']
