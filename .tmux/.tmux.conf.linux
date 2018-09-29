@@ -1,7 +1,9 @@
 # panes
 set-option -g pane-active-border-style bg=default,fg=yellow
 
+# wg_cpu="#[bg=default] CPU #(uptime | rev | cut -d":" -f1 | rev | sed s/,//g)"
+
 # statusbar
-set-option -g status-right '#[bg=yellow,fg=white,nobright,bold] MEM #(mem) #[bg=default] CPU #(uptime | rev | cut -d":" -f1 | rev | sed s/,//g) #[bg=yellow,fg=white,nobright, bold] #(ipad || echo err) #[bg=default] 🎧 #(nowplaying) #[bg=default]📅 %d-%b %H:%M' 
+set-option -g status-right '#[fg=colour31] #{?client_prefix,#[reverse]<Prefix>#[noreverse] ,} #[bg=yellow,fg=white,nobright,bold] MEM #(mem) #[bg=default] CPU #(uptime | rev | cut -d":" -f1 | rev | sed s/,//g) #[bg=yellow,fg=white,nobright, bold] #(ipad || echo err) #[bg=default] 🎧 #(nowplaying) #[bg=default]📅 %d-%b %H:%M'
 
 set-option -g status-left '#[bg=yellow,fg=white] #H #[bg=default] '
