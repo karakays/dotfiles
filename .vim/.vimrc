@@ -120,8 +120,10 @@ let mapleader="\\"
 
 nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 
-""" Quick editing
-nnoremap <leader>ev :split ~/.vim/.vimrc<cr>
+""" Quick edit .vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+""" Quick source .vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr><Bar>:AirlineRefresh<cr>
 
 """ Syntax check
 nnoremap <leader>C :SyntasticCheck<cr>
