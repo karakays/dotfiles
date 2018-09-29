@@ -179,6 +179,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*.so,*.swp,*.class
 " search by filename rather than path
 let g:ctrlp_by_filename = 0
+noremap <leader>cr :CtrlPClearCache<cr>
 " }}}
 
 " Syntastic settings ---------------------- {{{
