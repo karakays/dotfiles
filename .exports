@@ -5,6 +5,7 @@ export BASH="/usr/local/bin/bash"
 export SHELL="$BASH"
 export CLICOLOR=1
 export EDITOR=vim
+export PAGER=less
 export VISUAL=vim
 export PS1="\[\033[1;34m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH"
