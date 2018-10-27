@@ -21,6 +21,7 @@ alias topc="top -o cpu"
 alias cpwd="pwd | pbcopy"
 alias cl="fc -e - | pbcopy"                             # copy output of last cmd
 alias cal="cal -3"
+alias lsof="lsof -aP"
 
 
 # VCS
