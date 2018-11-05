@@ -1,13 +1,12 @@
 # Personal dotfiles
 
-Currently running in Ubuntu 18.04 and macOS High Sierra.
+Running on [Debian 9.5](https://www.debian.org/) and [macOS High Sierra](https://en.wikipedia.org/wiki/MacOS_High_Sierra) operating systems.
 
-## Screenshots
+## Packages
 
-
-![terminal](https://drive.google.com/uc?id=1Wxg5BHO_U5BjM4beD37NEdP5vLB0u7jl)
-
-![terminal](https://drive.google.com/uc?id=1OWzmyy8Pu6xrRu7mRByDw8wsGblX6Ndb)
+Some base packages include (needs to be updated):
+* vim version 8.1
+* tmux version 2.7
 
 ## Feedback
 
