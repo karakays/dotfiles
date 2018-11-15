@@ -14,4 +14,4 @@ set-option -ag status-right '#[bg=yellow,fg=white,nobright, bold] #(ipad || echo
 set-option -ag status-right '#[bg=default] 🎧 #(nowplaying) '
 set-option -ag status-right '#[bg=default]📅 %d-%b %H:%M'
 
-set-option -g status-left '#[bg=yellow,fg=white] #H #[bg=default] '
+set-option -g status-left '#[bg=colour1,fg=colour15] #H #[bg=default] '
