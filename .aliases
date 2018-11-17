@@ -22,6 +22,7 @@ alias cpwd="pwd | pbcopy"
 alias cl="fc -e - | pbcopy"                             # copy output of last cmd
 alias cal="cal -3"
 alias lsof="lsof -aP"
+alias journalctl="journalctl -xn"
 
 
 # VCS
