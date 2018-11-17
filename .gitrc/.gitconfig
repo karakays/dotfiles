@@ -1,21 +1,21 @@
 [user]
-    email = skarakayali@gmail.com
-    name = Selçuk Karakayalı
-    signingkey = E55AE9FA4F0EB833
+    email           = skarakayali@gmail.com
+    name            = Selçuk Karakayalı
+    signingkey      = E55AE9FA4F0EB833
 [core]
-    editor = vim
-    excludesfile = .gitignore_global
-    autocrlf = false
+    editor          = vim
+    excludesfile    = .gitignore_global
+    autocrlf        = false
 [commit]
-    template = ~/.gitrc/.stCommitMsg
+    template        = ~/.gitrc/.stCommitMsg
 [alias]
-    ci = commit -S
-    cla = clone --recurse-submodules
-    logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    st = status
+    ci              = commit -S
+    cla             = clone --recurse-submodules
+    logp            = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    st              = status
 [color]
-	ui = true
+    ui              = true
 [credential]
-	helper = cache --timeout=3600
+    helper          = cache --timeout=3600
 [submodule]
-	recurse = true
+    recurse         = true
