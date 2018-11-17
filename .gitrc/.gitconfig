@@ -1,11 +1,11 @@
 [user]
-	email = skarakayali@gmail.com
-	name = Selçuk Karakayalı
-	signingkey = E55AE9FA4F0EB833
+    email = skarakayali@gmail.com
+    name = Selçuk Karakayalı
+    signingkey = E55AE9FA4F0EB833
 [core]
-	editor = vim
-	excludesfile = .gitignore_global
-	autocrlf = false
+    editor = vim
+    excludesfile = .gitignore_global
+    autocrlf = false
 [commit]
     template = ~/.gitrc/.stCommitMsg
 [alias]
