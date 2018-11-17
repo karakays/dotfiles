@@ -9,7 +9,8 @@
 [commit]
     template = ~/.gitrc/.stCommitMsg
 [alias]
-    commit = commit -S
+    ci = commit -S
+    cla = clone --recurse-submodules
     logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
     clone = clone --recurse-submodules
