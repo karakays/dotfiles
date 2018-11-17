@@ -13,8 +13,9 @@
     cla = clone --recurse-submodules
     logg = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st = status
-    clone = clone --recurse-submodules
 [color]
 	ui = true
 [credential]
 	helper = cache --timeout=3600
+[submodule]
+	recurse = true
