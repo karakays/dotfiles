@@ -12,4 +12,4 @@ Some base packages include (needs to be updated):
 
 ## Feedback
 
-Suggestions/improvements are [very welcome!](https://github.com/karakays/dotfiles/issues)!
+Suggestions/improvements are [very welcome!](https://github.com/karakays/dotfiles/issues)
