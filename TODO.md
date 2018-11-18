@@ -4,3 +4,5 @@
 ## Bugs
 
 ## Promising
+ - Check how display manager can be tweaked with
+    * ~/.xinitrc and ~/.xsession
