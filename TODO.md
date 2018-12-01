@@ -1,5 +1,6 @@
 ## Improvements
 - Convert vim configuration into a standalone module
+- Install vim-surround by tpope
 
 ## Bugs
 
