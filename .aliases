@@ -23,6 +23,7 @@ alias cl="fc -e - | pbcopy"                             # copy output of last cm
 alias cal="cal -3"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
+alias curl="curl -i"
 
 
 # VCS
