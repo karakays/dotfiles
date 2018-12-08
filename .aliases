@@ -51,19 +51,3 @@ alias py2=python2.7
 alias py3=python3.5
 alias tmux_dt="tmux detach"
 alias tmux_ls="tmux list-sessions"
-alias redis_start="sudo redis-server \
-/opt/local/etc/redis.conf &"
-alias pg95_start="sudo /opt/local/etc/
-LaunchDaemons/org.macports.postgresql95-server/\
-postgresql95-server.wrapper start"
-alias pg95_stop="sudo  /opt/local/etc/
-LaunchDaemons/org.macports.postgresql95-server/\
-postgresql95-server.wrapper stop"
-alias pg96_start="sudo /opt/local/etc/\
-LaunchDaemons/org.macports.postgresql96-server/\
-postgresql96-server.wrapper start"
-alias pg96_stop="sudo  /opt/local/etc/\
-LaunchDaemons/org.macports.postgresql96-server/\
-postgresql96-server.wrapper stop"
-alias rabbitmq_start="sudo rabbitmq-server"
-alias rabbitmq_stop="sudo rabbitmqctl stop"
