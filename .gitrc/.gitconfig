@@ -10,6 +10,7 @@
     template        = ~/.gitrc/.stCommitMsg
 [alias]
     ci              = commit -S
+    co              = checkout
     cla             = clone --recurse-submodules
     logp            = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st              = status
@@ -19,3 +20,6 @@
     helper          = cache --timeout=3600
 [submodule]
     recurse         = true
+[submodule "themes/onetwothree"]
+	url = git@github.com:karakays/onetwothree.git
+	active = true
