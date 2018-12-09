@@ -4,8 +4,9 @@
 
 ## Improvements
 - Convert vim configuration into a standalone module
+- Check how to sync git submodules
 
-## Bugs
+## Bug
 
 ## Promising
 - Check how display manager can be tweaked with
