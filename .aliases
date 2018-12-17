@@ -38,7 +38,7 @@ alias config="/usr/bin/git \
 os=$(uname -s)
 
 if [ "$os" == "Linux" ]; then
-    alias gno="gnome-open ."
+    alias gno="xdg-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
     alias ll="ls -Flaht --color=auto"
 fi
