@@ -20,6 +20,3 @@
     helper          = cache --timeout=3600
 [submodule]
     recurse         = true
-[submodule "themes/onetwothree"]
-	url = git@github.com:karakays/onetwothree.git
-	active = true
