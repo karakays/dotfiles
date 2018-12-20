@@ -1,5 +1,5 @@
 ## TODO
-- Export PGP keys from Keybase to local
+- Export PGP keys from Keybase to local...
 - Get a theme from https://github.com/Mayccoll/Gogh
 
 ## Improvements
