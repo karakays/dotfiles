@@ -1,5 +1,5 @@
 ## TODO
-- Export PGP keys from Keybase to local...
+- set GPG uid and access it by e-mail address in gitconfig
 - Get a theme from https://github.com/Mayccoll/Gogh
 
 ## Improvements
