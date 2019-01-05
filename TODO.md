@@ -1,10 +1,9 @@
 ## TODO
-- set GPG uid and access it by e-mail address in gitconfig
+- add multiple usernames to GPG
 - Get a theme from https://github.com/Mayccoll/Gogh
 - gpg keep encrypted stuff
 
 ## Improvements
-- Convert vim configuration into a standalone module
 - Check how to sync git submodules
 - bash_logout
 
