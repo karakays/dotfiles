@@ -47,8 +47,3 @@ fi
 # APPS
 
 [ -f $HOME/.aliases.local ] && source $HOME/.aliases.local
-
-alias py2=python2.7
-alias py3=python3.5
-alias tmux_dt="tmux detach"
-alias tmux_ls="tmux list-sessions"
