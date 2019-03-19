@@ -5,7 +5,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias l="ls -FlhAtpo"
+alias l="ls -FlAhtpo"
 alias ll="ls -Flahtp"
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -rfv"
@@ -41,7 +41,8 @@ os=$(uname -s)
 if [ "$os" == "Linux" ]; then
     alias gno="xdg-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
-    alias ll="ls -Flaht --color=auto"
+    alias l="ls -FlAhtpo --color=auto"
+    alias ll="ls -Flahtp --color=auto"
 fi
 
 # APPS
