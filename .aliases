@@ -12,7 +12,8 @@ alias rmd="rm -rfv"
 alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # pretty PATH 
 alias grep="grep -in --color"                           # ignore-case with line number
-alias dus="du -sh | cut -f1"
+alias duc="du -scxh | cut -f1"                          # overall size of .
+alias dut="du -scxh *"                                  # overall size of each top-level directory of .
 alias pbcopy=$(hash pbcopy 2>/dev/null \
 && echo "pbcopy" || echo "xclip -selection clipboard")
 alias pbpaste=$(hash pbpaste 2>/dev/null \
@@ -25,6 +26,7 @@ alias cal="cal -3"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
 alias curl="curl -i"
+alias pgrep="pgrep -il"
 
 
 # VCS
@@ -48,3 +50,8 @@ fi
 # APPS
 
 [ -f $HOME/.aliases.local ] && source $HOME/.aliases.local
+
+alias py2=python2.7
+alias py3=python3.5
+alias tmux_dt="tmux detach"
+alias tmux_ls="tmux list-sessions"
