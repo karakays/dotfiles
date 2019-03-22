@@ -12,8 +12,8 @@ alias rmd="rm -rfv"
 alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # pretty PATH 
 alias grep="grep -in --color"                           # ignore-case with line number
-alias duc="du -scxh | cut -f1"                          # overall size of .
-alias dut="du -scxh *"                                  # overall size of each top-level directory of .
+alias dua="du -scxh *"                                  # size of each top-level directory of .
+alias duf="du -scxh"                                    # size of the filter given
 alias pbcopy=$(hash pbcopy 2>/dev/null \
 && echo "pbcopy" || echo "xclip -selection clipboard")
 alias pbpaste=$(hash pbpaste 2>/dev/null \
