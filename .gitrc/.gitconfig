@@ -1,7 +1,7 @@
 [user]
     email           = skarakayali@gmail.com
     name            = Selçuk Karakayalı
-    signingkey      = skarakayali@gmail.com
+    signingkey      = 1B86B0246A95C9EA 
 [core]
     editor          = vim
     excludesfile    = .gitignore_global
