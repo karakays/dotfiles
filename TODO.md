@@ -1,7 +1,5 @@
 ## TODO
-- add multiple usernames to GPG
 - Get a theme from https://github.com/Mayccoll/Gogh
-- gpg keep encrypted stuff
 - `devilspie2` auto-start and play around
 - ~/.config/autostart
 
