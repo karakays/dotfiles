@@ -28,6 +28,7 @@ alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
 alias curl="curl -i"
 alias pgrep="pgrep -il"
+alias ps="ps -rm"
 
 
 # VCS
@@ -47,6 +48,7 @@ if [ "$os" == "Linux" ]; then
     alias l="ls -AFt --color=auto"
     alias ll="ls -AFtlhpo --color=auto"
     alias lll="ls -aFtlhp --color=auto"
+    alias ps="ps --sort=-%mem,-%cpu"
 fi
 
 # APPS
