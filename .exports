@@ -23,5 +23,6 @@ export HISTIGNORE="clear:bg:fg:cd:cd -:exit:date:w:* --help"
 export HISTFILE="$HOME/.history/.bash_history"
 export HISTFILESIZE=2000
 export HISTSIZE=1000
+export PS_FORMAT="pid,ppid,user,state,%cpu,%mem,pri,tty,wchan,args"
 
 [ -f $HOME/.exports.local ] && source $HOME/.exports.local
