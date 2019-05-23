@@ -29,6 +29,7 @@ alias journalctl="journalctl -xn"
 alias curl="curl -i"
 alias pgrep="pgrep -il"
 alias ps="ps -rm"
+alias df="df -Th"
 
 
 # VCS
