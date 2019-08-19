@@ -30,6 +30,7 @@ alias curl="curl -i"
 alias pgrep="pgrep -il"
 alias ps="ps -rm"
 alias df="df -Th"
+alias vmstat="vmstat -SM"
 
 
 # VCS
