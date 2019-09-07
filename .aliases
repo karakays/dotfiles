@@ -21,8 +21,8 @@ alias pbpaste=$(hash pbpaste 2>/dev/null \
 && echo "pbpaste" || echo "xclip -selection clipboard -o")
 alias topm="top -o rsize"
 alias topc="top -o cpu"
-alias cpwd="pwd | pbcopy"
-alias cl="fc -e - | pbcopy"                             # copy output of last cmd
+alias cpp="pwd | pbcopy"                                 # copy current path
+alias cpc="fc -e - | pbcopy"                             # copy output of last cmd
 alias cal="cal -3"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
