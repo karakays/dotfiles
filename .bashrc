@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.bash_profile
+for file in ~/.bashrc.d/.* ; do
+    [ -f "$file" ] && [ -x "$file" ] && source "$file";
+done;
+
