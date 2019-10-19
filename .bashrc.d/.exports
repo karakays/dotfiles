@@ -19,6 +19,7 @@ export TMUXCONF="$TMUXHOME/.tmux.conf"
 export MAVEN="/Library/Java/Apache/apache-maven-3.3.9/bin/"
 export GIT_CONFIG="$HOME/.gitrc/.gitconfig"
 export HISTIGNORE="clear:bg:fg:cd:cd -:exit:date:w:* --help"
+export HISTCONTROL=ignoreboth
 export HISTFILE="$HOME/.history/.bash_history"
 export HISTFILESIZE=2000
 export HISTSIZE=1000
