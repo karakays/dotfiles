@@ -57,4 +57,4 @@ fi
 
 # APPS
 
-[ -f $HOME/.aliases.local ] && source $HOME/.aliases.local
+[ -f $HOME/.bashrc.d/.aliases.local ] && source $HOME/.bashrc.d/.aliases.local
