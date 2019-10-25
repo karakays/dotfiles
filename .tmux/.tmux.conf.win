@@ -1,0 +1,13 @@
+# set-environment -g CHERE_INVOKING 1
+
+# set -g @resurrect-save-command-strategy 'pgrep'
+# set -g @resurrect-processes '/usr/bin/vim'
+
+# panes
+set-option -g pane-active-border-style bg=default,fg=yellow
+
+set-option -g status-right '#[bg=black,fg=colour251,nobright, bold] #(ipad || echo 0.0.0.0) '
+set-option -ag status-right '#[bg=default]📅 %d-%b %H:%M'
+
+set-option -g status-left '#[bg=colour1,fg=colour15] #H #[bg=default] '
+
