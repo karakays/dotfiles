@@ -7,6 +7,6 @@ case $- in
 esac
 
 for file in ~/.bashrc.d/.* ; do
-    [ -f "$file" ] && [ -x "$file" ] && source "$file";
+    [ -f "$file" ] && echo running "$file" && source "$file";
 done;
 
