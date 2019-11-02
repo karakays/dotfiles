@@ -1,11 +1,11 @@
 ## TODO
-- Get a theme from https://github.com/Mayccoll/Gogh
 - `devilspie2` auto-start and play around
 - ~/.config/autostart
 
 ## Improvements
 - Check how to sync git submodules
 - bash_logout
+- include window no in tmux window names
 
 ## Bug
 - postgresql prompt now working
