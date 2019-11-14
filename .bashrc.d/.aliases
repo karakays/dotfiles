@@ -15,10 +15,6 @@ alias path="echo -e ${PATH} \
 alias grep="grep -in --color"                           # ignore-case with line number
 alias dua="du -hcxd 1"                                  # size of each top-level directory of .
 alias duf="du -scxh"                                    # size of the filter given
-alias pbcopy=$(hash pbcopy 2>/dev/null \
-&& echo "pbcopy" || echo "xclip -selection clipboard")
-alias pbpaste=$(hash pbpaste 2>/dev/null \
-&& echo "pbpaste" || echo "xclip -selection clipboard -o")
 alias topm="top -o rsize"
 alias topc="top -o cpu"
 alias cpp="pwd | pbcopy"                                 # copy current path
@@ -46,13 +42,20 @@ alias config="/usr/bin/git \
 
 os=$(uname -s)
 
-if [ "$os" == "Linux" ]; then
+if [[ "$os" == "Linux" ]]; then
+    echo islinux
     alias gno="xdg-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
     alias l="ls -AFt --color=auto"
     alias ll="ls -AFtlhpo --color=auto"
     alias lll="ls -aFtlhp --color=auto"
     alias ps="ps --sort=-%mem,-%cpu"
+    alias pbcopy="xclip -selection clipboard"
+    alias pbpaste="xclip -selection clipboard -o"
+elif [[ "$os" == CYGWIN* ]]; then
+    echo iscygwin
+    alias pbcopy="putclip"
+    alias pbpaste="getclip"
 fi
 
 # APPS
