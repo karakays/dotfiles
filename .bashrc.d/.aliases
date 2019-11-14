@@ -43,7 +43,6 @@ alias config="/usr/bin/git \
 os=$(uname -s)
 
 if [[ "$os" == "Linux" ]]; then
-    echo islinux
     alias gno="xdg-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
     alias l="ls -AFt --color=auto"
@@ -53,7 +52,6 @@ if [[ "$os" == "Linux" ]]; then
     alias pbcopy="xclip -selection clipboard"
     alias pbpaste="xclip -selection clipboard -o"
 elif [[ "$os" == CYGWIN* ]]; then
-    echo iscygwin
     alias pbcopy="putclip"
     alias pbpaste="getclip"
 fi
@@ -61,3 +59,4 @@ fi
 # APPS
 
 [ -f $HOME/.bashrc.d/.aliases.local ] && source $HOME/.bashrc.d/.aliases.local
+
