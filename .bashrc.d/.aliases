@@ -52,6 +52,9 @@ if [[ "$os" == "Linux" ]]; then
     alias pbcopy="xclip -selection clipboard"
     alias pbpaste="xclip -selection clipboard -o"
 elif [[ "$os" == CYGWIN* ]]; then
+    alias l="ls -AFt --color=auto"
+    alias ll="ls -AFtlhpo --color=auto"
+    alias lll="ls -aFtlhp --color=auto"
     alias pbcopy="putclip"
     alias pbpaste="getclip"
 fi
