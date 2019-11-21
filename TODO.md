@@ -5,7 +5,7 @@
 ## Improvements
 - Check how to sync git submodules
 - bash\_logout
-- include window no and current path in tmux window names
+- tmux C-9 go to last window
 
 ## Bug
 - postgresql prompt now working
