@@ -2,6 +2,7 @@
 - `devilspie2` auto-start and play around
 - ~/.config/autostart
 - git config --worktree
+- manage ssh keys to authn
 
 ## Improvements
 - Check how to sync git submodules
