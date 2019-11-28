@@ -1,11 +1,11 @@
 ## TODO
 - `devilspie2` auto-start and play around
 - ~/.config/autostart
+- git config --worktree
 
 ## Improvements
 - Check how to sync git submodules
 - bash\_logout
-- tmux C-9 go to last window
 
 ## Bug
 - postgresql prompt now working
