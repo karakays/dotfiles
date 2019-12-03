@@ -1,13 +1,12 @@
 # Personal dotfiles
 
-Running on [Debian 9.5](https://www.debian.org/) and [macOS High Sierra](https://en.wikipedia.org/wiki/MacOS_High_Sierra) operating systems.
+Running on [Debian](https://www.debian.org/) and [Cygwin](https://cygwin.com) operating systems. It also supports macOS but not active.
 
 ## Packages
 
 Some base packages include (needs to be updated):
-* vim version 8.1
-    - with support for scripting languages
-    - vim-nox
+* vim-gtk3 version 8.1
+    - with scripting language and clipboard support
 * tmux version 2.7
 
 ## Feedback
