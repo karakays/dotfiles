@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 alias sudo='sudo '                                      # enable aliases to be sudo’ed
+alias ..='cd ..'
+alias ...='cd ../..'
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
