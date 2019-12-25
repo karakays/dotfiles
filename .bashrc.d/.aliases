@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-alias sudo='sudo '                                      # enable aliases to be sudo’ed
-alias ..='cd ..'
-alias ...='cd ../..'
+alias sudo="sudo "                                      # enable aliases to be sudo’ed
+alias ..="cd .."
+alias ...="cd ../.."
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias l="ls -AFt"
+alias l="ls -Ft"
 alias ll="ls -AFtlhpo"
 alias lll="ls -aFtlhp"
 alias cpd="cp -R"                                       # copy directory tree
