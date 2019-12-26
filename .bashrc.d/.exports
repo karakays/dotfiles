@@ -24,6 +24,7 @@ export HISTFILE="$HOME/.history/.bash_history"
 export HISTFILESIZE=2000
 export HISTSIZE=1000
 export PS_FORMAT="pid,ppid,user,state,%cpu,%mem,pri,tty,wchan,args"
+export LS_COLORS=$LS_COLORS:'tw=30:ow=34:'
 [ -n "$SSH_CLIENT" ] && \
     export PS1="\u@$DOM:\W $ " || \
     export PS1="\[\033[1;34m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
