@@ -5,4 +5,7 @@ source ~/.bashrc
 PNAME="$(ps -o comm= $PPID)";
 
 # run tmux from terminals only
-[ "$PNAME" == "gnome-terminal-" ] || [[ "$PNAME" = *"iTerm2"* ]] && command -v tmux>/dev/null && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux -f $TMUXCONF
+[ "$PNAME" == "gnome-terminal-" ] || \
+    [[ "$PNAME" = *"iTerm2"* ]] && \
+    command -v tmux>/dev/null && \
+    [ -z $TMUX ] && tmux -f $TMUXCONF
