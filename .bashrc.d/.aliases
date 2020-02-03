@@ -14,7 +14,7 @@ alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -rfv"
 alias path="echo -e ${PATH} \
 | tr ':' '\n'"                                          # pretty PATH 
-alias grep="grep -in --color"                           # ignore-case with line number
+alias grep="grep -Iin --color"                          # ignore-case and binary
 alias dua="du -hcxd 1"                                  # size of each top-level directory of .
 alias duf="du -scxh"                                    # size of the filter given
 alias topm="top -o rsize"
