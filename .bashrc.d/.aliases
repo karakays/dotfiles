@@ -3,6 +3,7 @@
 alias sudo="sudo "                                      # enable aliases to be sudo’ed
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
@@ -32,19 +33,17 @@ alias vmstat="vmstat -SM"
 alias cl="clear"
 alias less="less -i"
 
-
 # VCS
 
 alias config="/usr/bin/git \
 --git-dir=$HOME/.cfg/ \
 --work-tree=$HOME"                                      # git repository for .files
 
-
 # OS-SPECIFIC
 
 os=$(uname -s)
 
-if [[ "$os" == "Linux" ]]; then
+if [[ "$os" == "Linux" ]] ; then
     alias gno="xdg-open ."
     alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
     alias l="$(alias l | cut -d "'" -f 2) --color=auto"
@@ -53,7 +52,7 @@ if [[ "$os" == "Linux" ]]; then
     alias ps="ps --sort=-%mem,-%cpu"
     alias pbcopy="xclip -selection clipboard"
     alias pbpaste="xclip -selection clipboard -o"
-elif [[ "$os" == CYGWIN* ]]; then
+elif [[ "$os" == CYGWIN* ]] ; then
     alias l="$(alias l | cut -d "'" -f 2) --color=auto"
     alias ll="$(alias ll | cut -d "'" -f 2) --color=auto"
     alias lll="$(alias lll | cut -d "'" -f 2) --color=auto"
