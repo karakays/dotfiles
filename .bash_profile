@@ -8,3 +8,6 @@ PNAME="$(ps -o comm= $PPID)";
     [[ "$PNAME" = *"iTerm2"* ]] && \
     command -v tmux>/dev/null && \
     [ -z $TMUX ] && tmux -f $TMUXCONF
+
+# start gpg-agent
+gpgconf --launch gpg-agent
