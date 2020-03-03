@@ -1,6 +1,6 @@
 # Personal dotfiles
 
-Running on [Debian](https://www.debian.org/) and [Cygwin](https://cygwin.com) operating systems. It also supports macOS but not active.
+Running on [Debian](https://www.debian.org/) and [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) operating systems. It also supports macOS but not maintained anymore.
 
 ## Packages
 
