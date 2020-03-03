@@ -8,7 +8,7 @@ set-option -g pane-active-border-style bg=default,fg=yellow
 
 # statusbar
 set-option -g status-right '#[fg=colour31] #{?client_prefix,#[reverse]<Prefix>#[noreverse] ,} '
-set-option -ag status-right '#[bg=default,fg=colour245,nobright,bold] MEM #(mem) '
+set-option -ag status-right '#[bg=default,fg=colour249,nobright,bold] MEM #(mem) '
 set-option -ag status-right '#[bg=default] CPU #(uptime | rev | cut -d ":" -f1 | rev | xargs) '
 set-option -ag status-right '#[bg=default] #(ipad || echo 0.0.0.0) '
 set-option -ag status-right '#[bg=default] 🎧 #(nowplaying) '
