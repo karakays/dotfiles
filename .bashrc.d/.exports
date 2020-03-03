@@ -17,7 +17,6 @@ export PGPASSFILE="$PGHOME/.pgpass"
 export PSQLRC="$PGHOME/.psqlrc"
 export TMUXHOME="$HOME/.tmux"
 export TMUXCONF="$TMUXHOME/.tmux.conf"
-export GIT_CONFIG="$HOME/.gitrc/.gitconfig"
 export HISTIGNORE="clear:bg:fg:cd:cd -:exit:date:w:* --help"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILE="$HOME/.history/.bash_history"
