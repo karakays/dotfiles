@@ -21,7 +21,6 @@ alias duf="du -scxh"                                    # size of the filter giv
 alias topm="top -o rsize"
 alias topc="top -o cpu"
 alias cpp="pwd | pbcopy"                                 # copy current path
-alias cpc="fc -e - | pbcopy"                             # copy output of last cmd
 alias cal="cal -3"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
@@ -32,6 +31,8 @@ alias df="df -Th"
 alias vmstat="vmstat -SM"
 alias cl="clear"
 alias less="less -i"
+alias rpc="fc -e - | pbcopy"                             # repeat and copy output
+alias rpl="fc -e - | less"
 
 # VCS
 
