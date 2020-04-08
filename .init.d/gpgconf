@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# start gpg-agent
+gpgconf --launch gpg-agent
