@@ -2,12 +2,15 @@
 
 source ~/.bashrc
 
+# init scripts for login shells
+for file in ~/.init.d/* ; do
+    [ -f "$file" ] && echo "running $file" && source "$file"
+done;
+
 # run tmux from terminals only
 PNAME="$(ps -o comm= $PPID)";
 [ "$PNAME" == "gnome-terminal-" ] || \
     [[ "$PNAME" = *"iTerm2"* ]] && \
     command -v tmux>/dev/null && \
-    [ -z $TMUX ] && tmux -f $TMUXCONF
-
-# start gpg-agent
-gpgconf --launch gpg-agent
+    [ -z $TMUX ] && \
+    tmux -f $TMUXCONF new-session -s init
