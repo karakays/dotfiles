@@ -4,14 +4,15 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xc
 # panes
 set-option -g pane-active-border-style bg=default,fg=yellow
 
-# wg_cpu="#[bg=default] CPU #(uptime | rev | cut -d":" -f1 | rev | sed s/,//g)"
+# empty
+set-option -g status-right ''
 
 # statusbar
-set-option -g status-right '#[fg=colour31] #{?client_prefix,#[reverse]<Prefix>#[noreverse] ,} '
-set-option -ag status-right '#[bg=default,fg=colour249,nobright,bold] MEM #(mem) '
-set-option -ag status-right '#[bg=default] CPU #(cpu_load) '
-set-option -ag status-right '#[bg=default] ☁️  #(ipad || echo 0.0.0.0) '
-set-option -ag status-right '#[bg=default] 🎧 #(nowplaying) '
-set-option -ag status-right '#[bg=default]📅 %d-%b %H:%M:%S'
+#set-option -g status-right '#[fg=colour31] #{?client_prefix,#[reverse]<Prefix>#[noreverse] ,} '
+#set-option -ag status-right '#[bg=default,fg=colour249,nobright,bold] MEM #(mem) '
+#set-option -ag status-right '#[bg=default] CPU #(cpu_load) '
+#set-option -ag status-right '#[bg=default] ☁️  #(ipad || echo 0.0.0.0) '
+#set-option -ag status-right '#[bg=default] 🎧 #(nowplaying) '
+#set-option -ag status-right '#[bg=default]📅 %d-%b %H:%M:%S'
 
-set-option -g status-left '#[bg=colour1,fg=colour15] #H #[bg=default] '
+set-option -g status-left '#[bg=colour1,fg=colour15][#S]#[bg=default] '
