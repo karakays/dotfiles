@@ -4,7 +4,7 @@ source ~/.bashrc
 
 # init scripts for login shells
 for file in ~/.init.d/* ; do
-    [ -f "$file" ] && echo "running $file" && source "$file"
+    [ -f "$file" ] && source "$file"
 done;
 
 # run tmux from terminals only
