@@ -1,2 +1,1 @@
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 0
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
