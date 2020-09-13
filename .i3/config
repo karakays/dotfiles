@@ -207,15 +207,11 @@ workspace_layout tabbed
 
 exec_always compton --config ~/.i3/compton.conf
 
-assign [class="Gnome-terminal"] 1
-assign [class="Eclipse"] 1
-assign [class="Firefox"] 2
-assign [class="thunderbird"] 3
-assign [class="Teams"] 3
-assign [class="evince"] 4
-assign [class="Franz"] 4
-assign [class="Skype"] 4
-for_window [class="Spotify"] 5
+assign [class="terminal|Eclipse|jetbrains"] → 1
+assign [class="Firefox|Opera"]              → 2
+assign [class="thunderbird|Teams"]          → 3
+assign [class="evince|Franz|Skype"]         → 4
+for_window [class="Spotify"]                → 5
 
 exec "notify-send Hello, Selçuk, welcome back!"
 
