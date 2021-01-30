@@ -193,12 +193,14 @@ bindsym $mod+d exec --no-startup-id "rofi -config ~/.i3/rofi/config.rasi -show c
 assign [class="terminal|Eclipse|jetbrains"]    → 1:dev
 # web
 assign [class="Firefox|Opera|Brave-browser"]   → 2:www
+# docs
+assign [class="Evince"]                        → 3:doc
 # work-comm
-assign [class="Evolution|thunderbird|Teams"]   → 3:work
+assign [class="Evolution|thunderbird|Teams"]   → 4:work
 # comm
-assign [class="evince|Franz|Skype|zoom"]       → 4:im
+assign [class="Franz|Skype|zoom"]              → 5:im
 # media
-for_window [class="Spotify"]                   → 5:media
+for_window [class="Spotify"]                   → 6:media
 
 
 exec "notify-send Hello, Selçuk, welcome back!"
