@@ -25,41 +25,41 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=$HOME/.i3/i3blocks/bin/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=20
 separator=true
 markup=none
 
-# Guess the weather hourly
-[weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
-color=#A4C2F4
+# Experiment
+[click]
+full_text=👽 Click me!
+command=echo "Got clicked with button $button"
+align=left
+color=#F79494
+
+# RESOURCES
 
 # CPU usage
-#
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
 label=CPU
 interval=10
-#min_width=CPU: 100.00%
+separator_block_width=5
 separator=false
 
-[load_average]
-label=LOAD
-interval=10
-separator=false
+#[load_average]
+#label=LOAD
+#interval=10
+#separator=false
 #min_width=CPU: 100.00%
 
 # Memory usage
-#
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-interval=30
+label= MEM
+interval=10
 
 # Disk usage
-#
 # The directory defaults to $HOME if the instance is not specified.
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
@@ -68,19 +68,27 @@ interval=30
 #instance=/mnt/data
 #interval=30
 
+
+# NETWORKING
+
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 #
-[wifi]
-label=IP
+[ip]
+label=
 instance=wlp3s0
 command=ipad
 interval=once
-separator=false
-#
-#
+separator=true
+
+[wifi]
+label=
+instance=wlp3s0
+interval=once
+separator=true
+
 #[iface]
 #instance=wlan0
 #color=#00FF00
@@ -88,9 +96,8 @@ separator=false
 #separator=false
 
 [bandwidth]
-#instance=eth0
+instance=wlp3s0
 interval=5
-
 
 #[load_average]
 #interval=10
@@ -98,7 +105,7 @@ interval=5
 # Battery indicator
 #
 [battery]
-label=⚡
+label=
 instance=0
 interval=30
 
@@ -108,23 +115,22 @@ interval=30
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=VOL
-#label=♪
+label=
 instance=Master
-#instance=PCM
 interval=once
 signal=10
 
-# Date Time
-#
-[time]
-command=date '+%Y-%m-%d %H:%M:%S'
-interval=5
+# LOCALE
 
-[click]
-full_text=Click me!
-command=echo "Got clicked with button $button"
-color=#F79494
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?format=1'
+interval=3600
+
+# Date Time
+[time]
+command=date '+%^b-%d %H:%M%:::z'
+interval=5
 
 # Generic media player support
 #
@@ -146,9 +152,9 @@ color=#F79494
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-label=TEMP
-interval=10
+# [temperature]
+# label=TEMP
+# interval=10
 
 # Key indicators
 #

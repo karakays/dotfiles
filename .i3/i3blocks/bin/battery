@@ -49,7 +49,7 @@ $full_text = "[$batt] $percent%";
 if ($status eq 'Discharging') {
 	$full_text .= ' DIS';
 } elsif ($status eq 'Charging') {
-	$full_text .= ' CHR';
+	$full_text .= '  ';
 }
 
 $short_text = $full_text;
