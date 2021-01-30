@@ -1,13 +1,27 @@
-# Personal dotfiles
+# Dotfiles
 
-Running on [Debian](https://www.debian.org/) and [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) operating systems. It also supports macOS but no more maintained.
+This is a cross-platform configuration. It is actively running on Debian, sometimes on macOS and occasionally on Windows Subsytem for Linux.
 
-## Packages
+## System
 
-Some base packages include (needs to be updated):
-* editor = vim-gtk3
-* terminal-multiplexer = tmux
-* wm = i3
+|||
+| --- | ---
+| shell | bash 
+| editor | vim-gtk3
+| terminal | gnome-terminal
+| terminal-multiplexer | tmux
+| wm | i3
+| status-bar | i3blocks
+| application-launcher | rofi
+
+## Themes
+
+|||
+| --- | ---
+| gnome-terminal | gruvbox-dark
+| tmux | custom
+| i3 and i3bar | srcery
+| rofi | gruvbox-dark
 
 ## Installation
 ```
@@ -16,7 +30,7 @@ $ curl -sf https://karakays.com/dotfiles_install | bash
 
 ## Disclaimer
 
-Use at your own risk!
+Feel free to steal anything you like and use at your own risk!
 
 ## Feedback
 
