@@ -20,7 +20,8 @@ alias dua="du -hcxd 1"                                  # size of each top-level
 alias duf="du -scxh"                                    # size of the filter given
 alias topm="top -o rsize"
 alias topc="top -o cpu"
-alias cpp="pwd | pbcopy"                                 # copy current path
+alias cwd="pwd | pbcopy"                                # copy current path
+alias pwbd="basename $(pwd)"                            # print base working directory
 alias cal="ncal -3wMb"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
@@ -31,7 +32,7 @@ alias df="df -Th"
 alias vmstat="vmstat -SM"
 alias cl="clear"
 alias less="less -i"
-alias rpc="fc -e - | pbcopy"                             # repeat and copy output
+alias rpc="fc -e - | pbcopy"                            # repeat and copy output
 alias rpl="fc -e - | less"
 
 # VCS
@@ -46,7 +47,6 @@ os=$(uname -s)
 
 if [[ "$os" == "Linux" ]] ; then
     alias gno="xdg-open ."
-    alias gdrive="google-drive-ocamlfuse $HOME/gdrive/"
     alias l="$(alias l | cut -d "'" -f 2) --color=auto"
     alias ll="$(alias ll | cut -d "'" -f 2) --color=auto"
     alias lll="$(alias lll | cut -d "'" -f 2) --color=auto"
