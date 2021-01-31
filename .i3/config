@@ -83,6 +83,43 @@ for_window [window_type="menu"] floating enable
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1:dev"
+set $ws2 "2:www"
+set $ws3 "3:doc"
+set $ws4 "4:work"
+set $ws5 "5:im"
+set $ws6 "6:media"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
 # move focused window
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -237,22 +274,13 @@ bindsym $mod+Shift+q kill
 # start rofi
 bindsym $mod+d exec --no-startup-id "rofi -config ~/.i3/rofi/config.rasi -show combi"
 
-# dev
-assign [class="terminal|Eclipse|jetbrains"]    → 1:dev
-# web
-assign [class="Firefox|Opera|Brave-browser"]   → 2:www
-# docs
-assign [class="Evince"]                        → 3:doc
-# work-comm
-assign [class="Evolution|thunderbird|Teams"]   → 4:work
-# comm
-assign [class="Franz|Skype|zoom"]              → 5:im
-# media
-for_window [class="Spotify"]                   → 6:media
-
-
-exec "notify-send Hello, Selçuk, welcome back!"
-exec gnome-terminal
+assign [class="terminal|Eclipse|jetbrains"]    → $ws1
+assign [class="Firefox|Opera|Brave-browser"]   → $ws2
+assign [class="Evince"]                        → $ws3
+assign [class="Evolution|thunderbird|Teams"]   → $ws4
+assign [class="Franz|Skype|zoom"]              → $ws5
+assign [class="discord|Gitter|Slack"]          → $ws5
+for_window [class="Spotify"]                   → $ws6
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -276,13 +304,10 @@ exec_always feh --bg-scale ~/Downloads/hin-bong-yeung-jF946mh5QrA-unsplash.jpg
     bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-bindsym $mod+m exec "lock_and_blur"
+exec --no-startup-id gnome-terminal workspace $ws1
