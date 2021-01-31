@@ -129,7 +129,7 @@ interval=3600
 
 # Date Time
 [time]
-command=date '+%^b-%d %H:%M%:::z'
+command=date '+%^b-%d %^a %H:%M%:::z'
 interval=5
 
 # Generic media player support
