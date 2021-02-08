@@ -2,11 +2,10 @@
 - `devilspie2` auto-start and play around
 - ~/.config/autostart
 - git config --worktree
-- manage ssh keys to authn
 
 ## Improvements
-- Check how to sync git submodules
-- bash\_logout
+- Update vim submodules
+- Provisiion keys from keybase
 
 ## Bug
 - postgresql prompt now working
