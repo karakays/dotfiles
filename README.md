@@ -4,8 +4,8 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 
 ## System
 
-|||
 | component | package
+|--- | ---
 | shell | bash 
 | editor | vim-gtk3
 | terminal | gnome-terminal
@@ -16,8 +16,8 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 
 ## Themes
 
-|||
 | package | theme
+|--- | ---
 | gnome-terminal | gruvbox-dark
 | tmux | custom
 | i3 and i3bar | srcery
@@ -25,11 +25,12 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 
 ## Dependant packages
 
-|||
 | package | version
+|--- | ---
 | tmux | 3.x
 | gpg | 2.x
 | keybase | 2.x
+| bash\_completion | 
 
 
 ## Installation
