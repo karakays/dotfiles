@@ -9,7 +9,6 @@ export PAGER="less -i"
 export VISUAL=vim
 export GOPATH="$HOME/go"
 export PATH="$HOME/.local/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/sbin:/sbin"
-export GPG_TTY=$(tty)
 export MYVIMRC="$HOME/.vim/.vimrc"
 export VIMINIT="source $MYVIMRC"
 export PGHOME="$HOME/.psql"
@@ -24,6 +23,7 @@ export HISTFILESIZE=2000
 export HISTSIZE=1000
 export PS_FORMAT="pid,ppid,user,state,%cpu,%mem,pri,tty,wchan,args"
 export LS_COLORS=$LS_COLORS:'tw=30:ow=34:'
+export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 [ -n "$SSH_CLIENT" ] && \
