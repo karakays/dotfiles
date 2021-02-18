@@ -34,6 +34,7 @@ alias cl="clear"
 alias less="less -i"
 alias rpc="fc -e - | pbcopy"                            # repeat and copy output
 alias rpl="fc -e - | less"
+alias gpgtty="gpg-connect-agent updatestartuptty /bye"  # update gpg-agent to current terminal
 
 # VCS
 

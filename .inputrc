@@ -8,6 +8,8 @@ set bell-style none
 # tab auto-comlete ignore-case
 set completion-ignore-case on
 
+set show-all-if-ambiguous on
+
 # intelligent auto-complete
 set skip-completed-text on
 
