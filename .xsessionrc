@@ -1,1 +1,4 @@
 xinput --set-prop "Synaptics TM3276-022" "Device Enabled" 0
+
+xmodmap -e "clear lock"                 #disable caps lock switch
+xmodmap -e "keysym Caps_Lock = Escape"  #set caps_lock as escape
