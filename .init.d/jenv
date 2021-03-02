@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# init jenv
+if which pyenv > /dev/null; then eval "$(jenv init -)"; fi
