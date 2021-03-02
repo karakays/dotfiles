@@ -31,10 +31,16 @@ markup=none
 
 # Experiment
 [click]
-full_text=👽 Click me!
+full_text= Click me!
 command=echo "Got clicked with button $button"
 align=left
 color=#F79494
+
+# Package updates
+[update]
+label=
+command=apt-get --dry-run dist-upgrade | grep -Po "^\d+ (?=upgraded)" | xargs
+interval=60
 
 # RESOURCES
 
@@ -58,6 +64,7 @@ separator=false
 [memory]
 label= MEM
 interval=10
+separator=true
 
 # Disk usage
 # The directory defaults to $HOME if the instance is not specified.
@@ -76,17 +83,16 @@ interval=10
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 #
-[ip]
+[ipad]
 label=
-instance=wlp3s0
-command=ipad
+command=/home/karakays/.local/bin/ipad
 interval=once
 separator=true
 
-[wifi]
+[network]
 label=
-instance=wlp3s0
-interval=once
+command=/sbin/iwgetid -r
+interval=60
 separator=true
 
 #[iface]
