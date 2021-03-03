@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# init pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

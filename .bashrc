@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # prepare environment for non-login sessions
-for file in ~/.bashrc.d/.* ; do
+for file in ~/.bashrc.d/{.*,*} ; do
     [ -f "$file" ] && source "$file"
 done;
 
