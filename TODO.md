@@ -1,5 +1,6 @@
 ## TODO
-- ~/.config/autostart
+- auto-mount keybase fs
+- auto-mount rclone
 - git config --worktree
 
 ## Improvements
