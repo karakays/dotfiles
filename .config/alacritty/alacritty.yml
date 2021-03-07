@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  #decorations: buttonless
 
   # Startup Mode (changes require restart)
   #
@@ -91,7 +91,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark`
   # and `light`. Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+  # gtk_theme_variant: None
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -104,7 +104,7 @@ window:
 # Font configuration
 font:
   # Normal (roman) font face
-  normal:
+  # normal:
     # Font family
     #
     # Default:
@@ -114,7 +114,7 @@ font:
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    # style: Regular
 
   # Bold font face
   #bold:
@@ -176,7 +176,7 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
   #primary:
   #  background: '#1d1f21'
@@ -214,19 +214,20 @@ font:
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  #search:
+  search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-    #focused_match:
-    #  foreground: CellBackground
-    #  background: CellForeground
+    matches:
+      foreground: '#000000'
+      background: '#ffff66'
+        #focused_match:
+        #foreground: '#000000'
+        #background: '#ffff00'
 
-    #bar:
+        #bar:
     #  background: '#c5c8c6'
-    #  foreground: '#1d1f21'
+    #background: '#FF3399'
+    #foreground: '#1d1f21'
 
   # Keyboard hints
   #hints:
@@ -252,9 +253,9 @@ font:
   # search and vi mode.
   #
   # By default, these will use the opposing primary color.
-  #line_indicator:
-  #  foreground: None
-  #  background: None
+  line_indicator:
+    foreground: None
+    background: '#FFFFFF'
 
   # Selection colors
   #
@@ -359,13 +360,13 @@ font:
 # The value `0.0` is completely transparent and `1.0` is opaque.
 background_opacity: 0.97
 
-#selection:
+selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
   #cursor:
   # Cursor style
@@ -393,7 +394,7 @@ background_opacity: 0.97
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: None
+  # vi_mode_style: Block
 
   # Cursor blinking interval in milliseconds.
   #blink_interval: 750
