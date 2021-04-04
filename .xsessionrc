@@ -1,14 +1,27 @@
 #!/bin/sh
+
+# disable Thinkpad touchpad
 xinput --set-prop "Synaptics TM3276-022" "Device Enabled" 0
 
 # disable caps lock switch
 xmodmap -e "clear lock"
+
 # set caps_lock as escape
 xmodmap -e "keysym Caps_Lock = Escape"
 
+# adjust system bell
+xset b 5 2000 200
+
+
+# TODO
+# (external) display names are not deterministic (DP1, DP2 etc.)
+# resolve this from xrandr and put names into an array
+# let xrandr read it in the --output option
+
+# external monitor setup
 monitors=$(xrandr | grep -sw 'connected' | wc -l)
 
 # adjust screen and restart wm
-[[ $monitors -eq 2 ]] && xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x360 --rotate normal \
-    --output DP1 --mode 2560x1440 --pos 1920x0 --rotate normal \
-    && i3 restart
+[[ $monitors -eq 2 ]] && xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal \
+    --output DP2 --mode 2560x1440 --pos 1920x0 --rotate normal \
+    && i3 restart > /dev/null
