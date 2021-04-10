@@ -3,17 +3,15 @@
 # disable Thinkpad touchpad
 xinput --set-prop "Synaptics TM3276-022" "Device Enabled" 0
 
-# disable caps lock switch
-xmodmap -e "clear lock"
+# swap ctrl_l with caps
+setxkbmap -option ctrl:swapcaps
 
-# set caps_lock as escape
-xmodmap -e "keysym Caps_Lock = Escape"
+# shift_r is esc
+xmodmap -e "keysym Shift_R = Escape"
 
 # adjust system bell
 xset b 5 2000 200
 
-
-# TODO
 # (external) display names are not deterministic (DP1, DP2 etc.)
 # resolve this from xrandr and put names into an array
 # let xrandr read it in the --output option
