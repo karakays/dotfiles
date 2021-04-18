@@ -60,6 +60,8 @@ elif [[ "$os" == CYGWIN* ]] ; then
     alias lll="$(alias lll | cut -d "'" -f 2) --color=auto"
     alias pbcopy="putclip"
     alias pbpaste="getclip"
+elif [[ "$os" == Darwin ]] ; then
+    alias cal="gcal -K --starting-day=1 ."
 fi
 
 # APPS
