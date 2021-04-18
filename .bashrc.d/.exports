@@ -35,3 +35,10 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     export PS1="\u@$DOM:\W $ " || \
     export PS1="\[\033[1;34m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
 
+
+os=$(uname -s)
+if [[ "$os" == "Darwin" ]] ; then
+    [[ -d "$(brew --prefix)/opt/coreutils" ]] &&
+        export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+fi
+

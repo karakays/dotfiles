@@ -32,6 +32,7 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 | gpg | 2.x
 | keybase | 2.x
 | bash\_completion | 
+| GNU coreutils
 
 
 ## Installation
