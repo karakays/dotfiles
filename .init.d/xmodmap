@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+os=$(uname -s)
+
+# Map mod keys for macOS
+# Key codes are documented in
+# https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+if [[ "$os" == Darwin ]] ; then
+    # <CapsLock> -> <Ctrl>
+    # <L-Ctrl>   -> <Esc>
+    hidutil property --set '{"UserKeyMapping":
+        [{"HIDKeyboardModifierMappingSrc":0x700000039,
+          "HIDKeyboardModifierMappingDst":0x7000000e0},
+         {"HIDKeyboardModifierMappingSrc":0x7000000E7,
+          "HIDKeyboardModifierMappingDst":0x700000029},
+         {"HIDKeyboardModifierMappingSrc":0x7000000E0,
+          "HIDKeyboardModifierMappingDst":0x700000029}]
+    }' > /dev/null
+fi
