@@ -25,7 +25,7 @@ alias pwbd="basename $(pwd)"                            # print base working dir
 alias cal="ncal -3wMb"
 alias lsof="lsof -aP"
 alias journalctl="journalctl -xn"
-alias curl="curl -i"
+alias crl="curl -i"
 alias pgrep="pgrep -il"
 alias ps="ps -rm"
 alias df="df -Th"
@@ -35,6 +35,7 @@ alias less="less -i"
 alias rpc="fc -e - | pbcopy"                            # repeat and copy output
 alias rpl="fc -e - | less"
 alias gpgtty="gpg-connect-agent updatestartuptty /bye"  # update gpg-agent to current terminal
+alias party="curl parrot.live"
 
 # VCS
 
