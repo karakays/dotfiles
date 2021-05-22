@@ -34,7 +34,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 [ -n "$SSH_CLIENT" ] && \
     export PS1="\u@$DOM:\W $ " || \
-    export PS1="\[\033[1;34m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " 
+    export PS1="\[\e[34;1m\]\W\[\e[1;40;31m\]\$(parse_git_branch)\[\e[0m\] $ "
 
 
 os=$(uname -s)
