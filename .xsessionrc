@@ -8,10 +8,10 @@ setxkbmap -option
 
 # keymap table can be seen with <code>xmodmap -pke</code>
 # https://wiki.archlinux.org/title/Xmodmap
-# <Caps_Lock> mapped to <Ctrl_L>
 # <Ctrl_Left> mapped to <Esc>
 # <grave>     mapped to <Esc>
 # keycode 94  mapped to <grave>
+# <Caps_Lock> unmapped
 xmodmap -e "clear Lock"
 xmodmap -e "clear Control"
 xmodmap -e "keysym Control_L = Escape"
@@ -23,14 +23,12 @@ xmodmap -e "keycode 94 = grave asciitilde"
 # adjust system bell
 xset b 5 2000 200
 
-# (external) display names are not deterministic (DP1, DP2 etc.)
-# resolve this from xrandr and put names into an array
-# let xrandr read it in the --output option
-
 # external monitor setup
-monitors=$(xrandr | grep -sw 'connected' | wc -l)
+# display names are not deterministic (DP1, DP2 etc.)
+IFS=' ' read -a monitors <<< $(xrandr | \grep -sw connected | awk 'BEGIN { ORS=" "}; {print $1}')
 
 # adjust screen and restart wm
-[[ $monitors -eq 2 ]] && xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal \
-    --output DP1 --mode 2560x1440 --pos 1920x0 --rotate normal \
+[[ ${#monitors[@]} -eq 2 ]] &&
+    xrandr --output ${monitors[0]} --primary --mode 1920x1080 --pos 0x0 --rotate normal \
+    --output ${monitors[1]} --mode 2560x1440 --pos 1920x0 --rotate normal \
     && i3 restart > /dev/null
