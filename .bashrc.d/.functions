@@ -24,7 +24,7 @@ colors16() {
             #Formatting
             for attr in 0 1 2 4 5 7 ; do
                 #Print the result
-                echo -en "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
+                    printf "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
             done
             echo #Newline
         done
