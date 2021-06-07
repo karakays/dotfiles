@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+#
+PROFILE=platform_services_dev
+
+#PROFILE=platform_services_prod
+
+gimme-aws-creds --profile ${PROFILE}
+
+export AWS_PROFILE=${PROFILE}
+
+export KUBECONFIG=~/workspace/udemy/website-django/services/kubeconfigs/platform_legacydev_eks.yaml
+
+# KUBECONFIG=~/.kube/prod_kube_config.yml
+
