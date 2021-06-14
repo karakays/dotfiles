@@ -1,2 +1,8 @@
 source ~/.vim/.vimrc
+# To find action in IntelliJ
+# https://stackoverflow.com/questions/34633434/how-to-map-keys-for-ideavims-normal-mode-to-editors-action
 nmap g] :action GotoImplementation<CR>
+nmap tk :action NextTab<CR>
+nmap tj :action PreviousTab<CR>
+nmap t0 :action GoToTab1<CR>
+nmap t9 :action GoToLastTab<CR>
