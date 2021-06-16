@@ -4,5 +4,5 @@ source ~/.vim/.vimrc
 nmap g] :action GotoImplementation<CR>
 nmap tk :action NextTab<CR>
 nmap tj :action PreviousTab<CR>
-nmap t0 :action GoToFirstTab<CR>
+nmap t0 :action GoToTab1<CR>
 nmap t9 :action GoToLastTab<CR>
