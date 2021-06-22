@@ -19,4 +19,7 @@
     * ~/.xinitrc and ~/.xsession
 - Install vim-surround by tpope
 - nc netcat tool
+- bat > cat
+fd > find
+
 

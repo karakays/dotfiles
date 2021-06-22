@@ -1,6 +1,10 @@
 # Dotfiles
 
-This is my cross-platform configuration. It is actively running on Debian, sometimes on macOS and occasionally on Windows Subsytem for Linux.
+This is my cross-platform configuration. It is actively running on *Debian*, sometimes on *macOS* and occasionally on *Windows Subsytem for Linux*.
+
+## Showcases
+
+![alt text](https://raw.githubusercontent.com/karakays/dotfiles/master/screenshots/macos.png "Screenshot from macOS")
 
 ## System
 
@@ -8,7 +12,7 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 |--- | ---
 | shell | bash 
 | editor | vim-gtk3
-| terminal | gnome-terminal
+| terminal | alacritty
 | terminal-multiplexer | tmux
 | wm | i3
 | status-bar | i3blocks
@@ -23,7 +27,7 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 | i3 and i3bar | srcery
 | rofi | gruvbox-dark
 
-## Dependant packages
+## Dependencies
 
 | package | version
 |--- | ---
@@ -32,7 +36,8 @@ This is my cross-platform configuration. It is actively running on Debian, somet
 | gpg | 2.x
 | keybase | 2.x
 | bash\_completion | 
-| GNU coreutils
+| GNU coreutils |
+| and some more... |
 
 
 ## Installation
@@ -42,7 +47,7 @@ $ curl -sf https://karakays.com/dotfiles_install | bash
 
 ## Disclaimer
 
-Feel free to steal anything you like and use at your own risk!
+Here be dragons... Feel free to steal anything you like! 
 
 ## Feedback
 

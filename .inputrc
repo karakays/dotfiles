@@ -18,5 +18,6 @@ $if mode=vi
     set vi-ins-mode-string "\1\e[3 q\2"
     set vi-cmd-mode-string "\1\e[0 q\2"
     "jk": vi-movement-mode
-    set keymap vi-insert
+    # https://stackoverflow.com/questions/10002356/what-does-set-keymap-vi-do
+    set keymap vi-command
 $endif
