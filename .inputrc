@@ -1,7 +1,5 @@
 # ~/.inputrc
 
-set editing-mode vi
-
 # cut the noise
 set bell-style none
 
@@ -13,10 +11,12 @@ set show-all-if-ambiguous on
 # intelligent auto-complete
 set skip-completed-text on
 
+set editing-mode vi
+
 $if mode=vi
-    set show-mode-in-prompt
-    set keymap vi-insert
-    set vi-ins-mode-string "\1\e[6 q\2"
-    set vi-cmd-mode-string "\1\e[2 q\2"
+    set show-mode-in-prompt on
+    set vi-ins-mode-string "\1\e[3 q\2"
+    set vi-cmd-mode-string "\1\e[0 q\2"
     "jk": vi-movement-mode
+    set keymap vi-insert
 $endif
