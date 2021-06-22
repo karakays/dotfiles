@@ -51,4 +51,4 @@ Here be dragons... Feel free to steal anything you like!
 
 ## Feedback
 
-Any suggestions or feedback? Raise a [pull request.](https://github.com/karakays/dotfiles/pulls)
+You have found something useful? Great! Star this repo and share your ❤️
