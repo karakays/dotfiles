@@ -448,15 +448,15 @@ cursor:
   #   - Always: Force the cursor to always blink
     blinking: Always
 
-# Vi mode cursor style
-#
-# If the vi mode cursor style is `None` or not specified, it will fall back to
-# the style of the active value of the normal cursor.
-#
-# See `cursor.style` for available options.
-  #vi_mode_style: Beam
+  # Vi mode cursor style
+  #
+  # If the vi mode cursor style is `None` or not specified, it will fall back to
+  # the style of the active value of the normal cursor.
+  #
+  # See `cursor.style` for available options.
+  #  vi_mode_style: Beam
 
-# Cursor blinking interval in milliseconds.
+  # Cursor blinking interval in milliseconds.
   blink_interval: 500
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
@@ -465,7 +465,7 @@ cursor:
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  thickness: 0.20
+  thickness: 0.35
 
 # Live config reload (changes require restart)
 live_config_reload: true
