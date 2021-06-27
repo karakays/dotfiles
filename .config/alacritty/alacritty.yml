@@ -457,7 +457,7 @@ cursor:
   #  vi_mode_style: Beam
 
   # Cursor blinking interval in milliseconds.
-  blink_interval: 500
+  blink_interval: 400
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -465,7 +465,7 @@ cursor:
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  thickness: 0.35
+  thickness: 0.20
 
 # Live config reload (changes require restart)
 live_config_reload: true

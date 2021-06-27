@@ -14,7 +14,7 @@ os=$(uname -s)
 
 [ "$os" == "Darwin" ] && [ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
 
-command_not_found_handle() {
+command_not_found_handle1() {
     if cmd.exe /c "(where $1 || (help $1 |findstr /V Try)) >nul 2>nul && ($* || exit 0)"; then
         return $?
     else
