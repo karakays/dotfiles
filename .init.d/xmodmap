@@ -15,4 +15,7 @@ if [[ "$os" == Darwin ]] ; then
          {"HIDKeyboardModifierMappingSrc":0x700000064,
           "HIDKeyboardModifierMappingDst":0x700000029}]
     }' > /dev/null
+elif [[ "$os" == Linux ]] ; then
+    xmodmap ~/.xmodmap
 fi
+
