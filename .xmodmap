@@ -1,6 +1,3 @@
-! clear modmap defaults for idempotent exec.
-! setxkbmap -option 
-
 ! keymap table can be seen with <code>xmodmap -pke</code>
 ! https://wiki.archlinux.org/title/Xmodmap
 ! <Ctrl_Left> mapped to <Esc>
