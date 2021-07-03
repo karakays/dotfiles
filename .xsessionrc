@@ -1,24 +1,10 @@
-#!/bin/sh
+#!/usr/env/bin bash
 
 # disable Thinkpad touchpad
 xinput --set-prop "Synaptics TM3276-022" "Device Enabled" 0
 
 # clear modmap defaults for idempotent exec.
 setxkbmap -option 
-
-# keymap table can be seen with <code>xmodmap -pke</code>
-# https://wiki.archlinux.org/title/Xmodmap
-# <Ctrl_Left> mapped to <Esc>
-# <grave>     mapped to <Esc>
-# keycode 94  mapped to <grave>
-# <Caps_Lock> unmapped
-xmodmap -e "clear Lock"
-xmodmap -e "clear Control"
-xmodmap -e "keysym Control_L = Escape"
-xmodmap -e "keysym Caps_Lock = Control_L"
-xmodmap -e "add Control = Control_L"
-xmodmap -e "keycode 49 = Escape"
-xmodmap -e "keycode 94 = grave asciitilde"
 
 # adjust system bell
 xset b 5 2000 200
