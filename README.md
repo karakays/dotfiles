@@ -4,7 +4,15 @@ This is my cross-platform configuration. It is actively running on *Debian*, som
 
 ## Showcases
 
-![alt text](https://raw.githubusercontent.com/karakays/dotfiles/master/screenshots/linux.png "Screenshot from debian")
+#### Linux desktop
+
+![alt text](https://raw.githubusercontent.com/karakays/dotfiles/master/screenshots/linux_00.png "Screenshot from debian")
+
+#### Linux terminal focus
+
+![alt text](https://raw.githubusercontent.com/karakays/dotfiles/master/screenshots/linux_01.png "Screenshot from debian")
+
+#### macOS terminal focus
 
 ![alt text](https://raw.githubusercontent.com/karakays/dotfiles/master/screenshots/macos.png "Screenshot from macOS")
 
