@@ -13,8 +13,7 @@ alias ll="ls -AFtlhpo"
 alias lll="ls -aFtlhp"
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -rfv"
-alias path="echo -e ${PATH} \
-| tr ':' '\n'"                                          # pretty PATH 
+alias path="echo -e ${PATH} | tr ':' '\n'"              # pretty PATH
 alias grep="grep -Iin --color"                          # ignore-case and binary
 alias dua="du -hcxd 1"                                  # size of each top-level directory of .
 alias duf="du -scxh"                                    # size of the filter given
