@@ -8,9 +8,9 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 alias rm="rm -v"
-alias l="ls -Ft"
-alias ll="ls -AFtlhpo"
-alias lll="ls -aFtlhp"
+alias l="ls -Ft --color=auto"
+alias ll="ls -AFtlhpo --color=auto"
+alias lll="ls -aFtlhp --color=auto"
 alias cpd="cp -R"                                       # copy directory tree
 alias rmd="rm -rfv"
 alias path="echo -e ${PATH} | tr ':' '\n'"              # pretty PATH
@@ -48,16 +48,10 @@ os=$(uname -s)
 
 if [[ "$os" == "Linux" ]] ; then
     alias gno="xdg-open ."
-    alias l="$(alias l | cut -d "'" -f 2) --color=auto"
-    alias ll="$(alias ll | cut -d "'" -f 2) --color=auto"
-    alias lll="$(alias lll | cut -d "'" -f 2) --color=auto"
     alias ps="ps --sort=-%mem,-%cpu"
     alias pbcopy="xclip -selection clipboard"
     alias pbpaste="xclip -selection clipboard -o"
 elif [[ "$os" == CYGWIN* ]] ; then
-    alias l="$(alias l | cut -d "'" -f 2) --color=auto"
-    alias ll="$(alias ll | cut -d "'" -f 2) --color=auto"
-    alias lll="$(alias lll | cut -d "'" -f 2) --color=auto"
     alias pbcopy="putclip"
     alias pbpaste="getclip"
 elif [[ "$os" == Darwin ]] ; then
