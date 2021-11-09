@@ -47,6 +47,7 @@ This is my cross-platform configuration. It is actively running on *Debian*, som
 | keybase | 2.x
 | bash\_completion | 
 | GNU coreutils |
+| sdkman |
 | and some more... |
 
 
