@@ -31,6 +31,7 @@ export MYSQL_HISTFILE="$MYSQL_HOME/.mysql_history"
 export MYSQL_TEST_LOGIN_FILE=$MYSQL_HOME/mylogin.cnf
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SDKMAN_DIR="$HOME/.sdkman"
 
 [ -n "$SSH_CLIENT" ] && \
     export PS1="\u@$DOM:\W $ " || \

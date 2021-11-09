@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# init jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
