@@ -2,12 +2,15 @@
 - auto-mount keybase fs
 - auto-mount rclone
 - git config --worktree
+- how much last command took, zsh from vincent
 
 ## Improvements
 - First time cloning, any submodules need to be initialized like vim submodules
 - Provision keys from keybase
 - keybase mounts can only be accessed with `keybase fs` commands which prevents `ssh` to read host configuration from .ssh/config.d/\*
-- import ideavimrc keybindings
+- i3blocks hide wireless name, reveal on click
+- i3blocks coin/currency prices
+- i3blocks battery status compact
 
 ## Bug
 - postgresql prompt now working
@@ -15,11 +18,7 @@
 - fix apt repos with wrong signatures
 
 ## Promising
-- Check how display manager can be tweaked with
-    * ~/.xinitrc and ~/.xsession
 - Install vim-surround by tpope
 - nc netcat tool
 - bat > cat
-fd > find
-
-
+- fd > find
