@@ -6,9 +6,10 @@ export TMUXCONF="$TMUXHOME/.tmux.conf"
 # run tmux from terminals only
 PNAME="$(ps -o comm= $PPID)";
 [ "$PNAME" == "gnome-terminal-" ] || \
-    [[ "$PNAME" = *"iTerm2"* ]] || \
     [[ "$PNAME" = *"alacritty" ]] && \
     command -v tmux>/dev/null && \
     [ -z $TMUX ] && \
-    tmux -f $TMUXCONF new-session -s init
-
+    tmux -f $TMUXCONF new -s init\; \
+    new -d -s ud-data\; \
+    new -d -s ud-remote\; \
+    new -d -s ud-code -c "$HOME/workspace/udemy";

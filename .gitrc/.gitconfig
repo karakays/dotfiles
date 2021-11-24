@@ -16,6 +16,7 @@
     logp            = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st              = status
     diffs           = diff --staged
+    master          = !git checkout master && git pull origin master && git checkout -
 [color]
     ui              = true
 [credential]
