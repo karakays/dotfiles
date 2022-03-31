@@ -12,4 +12,5 @@ PNAME="$(ps -o comm= $PPID)";
     tmux -f $TMUXCONF new -s init\; \
     new -d -s ud-data\; \
     new -d -s ud-remote\; \
-    new -d -s ud-code -c "$HOME/workspace/udemy";
+    new -d -s ud-code -c "$HOME/workspace/udemy"; \
+    send-keys -t ud-code:1 'cd website-django;vim';
