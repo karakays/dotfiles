@@ -1,2 +1,0 @@
-# copy-mode bindings
-bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "putclip"

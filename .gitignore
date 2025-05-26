@@ -1,0 +1,6 @@
+zsh/.zcompdump*
+zsh/.zsh_history
+tmux/plugins/
+*~*/
+.swp
+

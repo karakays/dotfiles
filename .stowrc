@@ -1,0 +1,6 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=DS_Store
+--ignore=.zsh_history
+--ignore=.zcompdump.*
+--ignore='tmux/plugins/.*'
