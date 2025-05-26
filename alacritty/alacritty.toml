@@ -1,0 +1,103 @@
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[general]
+live_config_reload = true
+
+[terminal]
+
+[colors.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.cursor]
+text = "CellBackground"
+
+[colors.dim]
+black = "#32302f"
+blue = "#076678"
+cyan = "#427b58"
+green = "#79740e"
+magenta = "#8f3f71"
+red = "#9d0006"
+white = "#928374"
+yellow = "#b57614"
+
+[colors.line_indicator]
+background = "#FFFFFF"
+foreground = "None"
+
+[colors.normal]
+black = "#282828"
+blue = "#458588"
+cyan = "#689d6a"
+green = "#98971a"
+magenta = "#b16286"
+red = "#cc241d"
+white = "#a89984"
+yellow = "#d79921"
+
+[colors.primary]
+background = "#282828"
+bright_foreground = "#f9f5d7"
+dim_foreground = "#f2e5bc"
+foreground = "#fbf1c7"
+
+[colors.search.matches]
+background = "#ffff66"
+foreground = "#000000"
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+
+[cursor]
+blink_interval = 400
+thickness = 0.2
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+
+[env]
+TERM = "xterm-256color"
+LANG = "en_US.UTF-8"
+
+[font]
+size = 14
+normal = { family ="JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+
+[font.offset]
+x = 0
+y = 0
+
+[selection]
+save_to_clipboard = false
+
+[terminal.shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+dynamic_padding = true
+startup_mode = "Maximized"
+opacity = 0.95
+
+[window.padding]
+x = 0
+y = 0
+
+[mouse]

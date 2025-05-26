@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-ssh -D 9999 -f -C -q -N ocean && firefox &

@@ -1,0 +1,25 @@
+[user]
+    email           = skarakayali@gmail.com
+    name            = Selçuk Karakayalı
+    signingkey      = skarakayali@gmail.com
+[core]
+    editor          = vim
+    excludesfile    = .gitignore_global
+    autocrlf        = false
+    filemode        = false
+[commit]
+	gpgsign = true
+[alias]
+    ci              = commit -S
+    co              = checkout
+    cla             = clone --recurse-submodules
+    logp            = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    st              = status
+    diffs           = diff --staged
+    main          = !git checkout main && git pull origin main && git checkout -
+[gpg]
+	format          = ssh
+[color]
+    ui              = true
+[user]
+	signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIILaOisNzOIW9TPKQ6Qolg3zpDKLiOM48x/22pimkeHP skarakayali@gmail.com
