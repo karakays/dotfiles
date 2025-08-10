@@ -1,6 +1,6 @@
 [user]
-    email           = skarakayali@gmail.com
-    name            = Selçuk Karakayalı
+	email           = skarakayali@gmail.com
+	name            = Selçuk Karakayalı
     signingkey      = skarakayali@gmail.com
 [core]
     editor          = vim
@@ -9,6 +9,8 @@
     filemode        = false
 [commit]
 	gpgsign = true
+[push]
+    autoSetupRemote = true
 [alias]
     ci              = commit -S
     co              = checkout
@@ -16,10 +18,17 @@
     logp            = log --all --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     st              = status
     diffs           = diff --staged
-    main          = !git checkout main && git pull origin main && git checkout -
+    main            = !git checkout main && git pull origin main && git checkout -
 [gpg]
 	format          = ssh
 [color]
     ui              = true
 [user]
-	signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIILaOisNzOIW9TPKQ6Qolg3zpDKLiOM48x/22pimkeHP skarakayali@gmail.com
+	signingkey      = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC7mbgO518ZwoqvI6KB1GgDbLiBnbPdkSDOSIakHEPEA skarakayali@gmail.com
+[includeIf "gitdir:~/Code/"]
+    path            = ~/workspace/dotfiles/git/work.config
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
