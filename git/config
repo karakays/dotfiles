@@ -7,6 +7,7 @@
     excludesfile    = .gitignore_global
     autocrlf        = false
     filemode        = false
+    sshCommand      = ssh -o IdentitiesOnly=yes -i ~/.ssh/personal_ed25519
 [commit]
 	gpgsign = true
 [push]
