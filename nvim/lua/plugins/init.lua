@@ -53,6 +53,15 @@ return {
       end,
   },
 
+  -- Lazygit integration
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+    end,
+  },
+
   -- Statusline replacement for airline
   {
     "nvim-lualine/lualine.nvim",

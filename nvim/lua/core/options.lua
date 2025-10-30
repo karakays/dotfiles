@@ -46,8 +46,8 @@ set.grepformat = '%f:%l:%c:%m'
 --set.filetype = 'plugin indent on'
 
 -- Swap and backup directories
-set.directory = '~/.vim/swap//'
-set.backupdir = '~/.vim/backup//'
+set.directory = vim.fn.expand('~') .. '/.vim/swap//'
+set.backupdir = vim.fn.expand('~') .. '/.vim/backup//'
 
 -- Enable syntax highlighting
 vim.opt.termguicolors = true
