@@ -87,4 +87,9 @@ map('n', '<leader>C', ':SyntasticCheck<CR>', opts)
 -- Syntastic settings
 map('n', '<leader>s', ':SyntasticCheck<CR>', opts)
 
+-- LSP format on demand
+vim.keymap.set('n', '<leader>lf', function()
+  vim.lsp.buf.format({ async = true })
+end, { noremap = true, silent = true, desc = 'LSP Format' })
+
 

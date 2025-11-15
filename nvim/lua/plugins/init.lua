@@ -15,6 +15,23 @@ return {
       end,
   },
 
+  -- Treesitter for better syntax highlighting
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = { "java", "kotlin", "lua", "python" },
+        highlight = {
+          enable = true,
+        },
+        indent = {
+          enable = true,
+        },
+      })
+    end,
+  },
+
   -- Kotlin Syntax Highlighting (still useful)
   {
     "udalov/kotlin-vim"
@@ -49,7 +66,7 @@ return {
     config = function()
         local keymap = vim.keymap.set
         local opts = { noremap = true, silent = true, desc = "" }
-        keymap("n", "<leader>gs", ":Git<CR>",     { desc = "Git status" })
+        keymap("n", "<space>g", ":G<CR>",     { desc = "Git status" })
       end,
   },
 
