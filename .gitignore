@@ -4,3 +4,10 @@ tmux/plugins/
 *~*/
 .swp
 
+# Local/private configs with secrets or machine-specific settings
+# Use *.local.* suffix for any environment-specific files that shouldn't be committed
+*.local.*
+!*.local.*.template
+*.local
+!*.local.template
+
