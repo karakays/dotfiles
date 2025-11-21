@@ -10,6 +10,21 @@ This is a personal dotfiles repository containing configuration files for:
 - **nvim**: Neovim editor configuration
 - Other development tools and utilities
 
+## Deployment
+
+Dotfiles are deployed using [GNU Stow](https://www.gnu.org/software/stow/):
+
+```bash
+stow .
+```
+
+This creates symlinks from the repository directories to the appropriate locations in the home directory. For example:
+- `zsh/.zshrc` → `~/.zshrc`
+- `tmux/.tmux.conf` → `~/.tmux.conf`
+- `nvim/` → `~/.config/nvim/`
+
+**Important**: After making changes to dotfiles, they take effect immediately since the home directory files are symlinked to this repository.
+
 ## Git Workflow
 
 **This repository pushes directly to the `master` branch.** There are no pull requests or feature branches - all commits go straight to main.
