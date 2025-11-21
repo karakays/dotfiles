@@ -73,5 +73,5 @@ If you encounter files with company-specific suffixes (like `-lvh.zsh`, `-compan
 
 ## Documentation
 
-- **tmux/cheatsheet.md** - Quick reference for tmux keybindings and commands
+- **tmux/CHEATSHEET.md** - Quick reference for tmux keybindings and commands
 - Keep documentation concise and up-to-date with actual configurations
