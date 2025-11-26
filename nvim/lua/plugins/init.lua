@@ -21,7 +21,7 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "java", "kotlin", "lua", "python" },
+        ensure_installed = { "bash", "java", "json", "kotlin", "lua", "markdown", "python", "yaml" },
         highlight = {
           enable = true,
         },
@@ -128,7 +128,41 @@ return {
   },
   
   -- gruvbox color theme
- { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+
+  -- Render markdown with visual enhancements
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    config = function()
+      require("render-markdown").setup({
+        heading = {
+          enabled = true,
+          icons = { "󰎤 ", "󰎧 ", "󰎪 ", "󰎭 ", "󰎱 ", "󰎳 " },
+        },
+        code = {
+          enabled = true,
+          style = "full",
+          border = "thin",
+        },
+        bullet = {
+          enabled = true,
+          icons = { "●", "○", "◆", "◇" },
+        },
+        checkbox = {
+          enabled = true,
+          unchecked = { icon = "󰄱 " },
+          checked = { icon = "󰄵 " },
+        },
+        pipe_table = {
+          enabled = true,
+          style = "full",
+        },
+      })
+      vim.keymap.set("n", "<leader>mr", "<cmd>RenderMarkdown toggle<cr>", { desc = "Toggle markdown render" })
+    end,
+  },
  {
   "neovim/nvim-lspconfig", -- LSP client
   "williamboman/mason.nvim", -- LSP/DAP/Linter installer
