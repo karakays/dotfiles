@@ -1,0 +1,93 @@
+# Neovim Keybindings Quick Reference
+
+**Leader key:** `<Space>`
+
+---
+
+## File Navigation (Telescope)
+
+- `<leader>ff` - **Find files** (fuzzy file finder)
+- `<leader>fg` - **Live grep** (search text across project)
+- `<leader>fb` - Find buffers
+- `<leader>fh` - Find help tags
+- `<leader>gr` - Grep word under cursor
+
+---
+
+## File Explorer (NvimTree)
+
+- `<leader>e` - **Toggle file explorer**
+- `<leader>f` - Focus file explorer
+- `<leader>r` - Refresh file explorer
+
+**Inside NvimTree:**
+- `a` - Create file/directory
+- `d` - Delete
+- `r` - Rename
+- `x` - Cut
+- `c` - Copy
+- `p` - Paste
+- `<CR>` - Open file
+
+---
+
+## Git
+
+- `<leader>g` - Git status (fugitive)
+- `<leader>gg` - **LazyGit** (full TUI)
+
+---
+
+## LSP & Code
+
+- `<leader>lf` - Format document
+- `gd` - Go to definition
+- `gr` - Go to references
+- `K` - Hover documentation
+- `<C-Space>` - Trigger completion
+
+---
+
+## Tabs
+
+- `tn` - New tab
+- `tq` - Close tab
+- `tj` - Previous tab
+- `tk` - Next tab
+- `t0` - First tab
+- `t9` - Last tab
+
+---
+
+## Navigation & Editing
+
+- `jk` - Exit insert mode (instead of Esc)
+- `s` - Save file
+- `q` - Quit
+- `<Space>` - Clear search highlight
+- `<CR>` - Create blank line below
+- `<C-j>` - Scroll down
+- `<C-k>` - Scroll up
+
+---
+
+## Folding
+
+- `za` - Toggle fold
+- `zO` - Open all folds
+- `zM` - Close all folds
+- `zr` - Reduce fold level
+- `zm` - Increase fold level
+
+---
+
+## Markdown
+
+- `<leader>mr` - Toggle markdown rendering
+
+---
+
+## Config
+
+- `<leader>ve` - Edit config
+- `<leader>vs` - Source/reload config
