@@ -54,14 +54,15 @@ Once in copy-mode:
 - `Ctrl-b n/p` - Next/previous window
 - `Ctrl-b 0/9` - First/last window
 
-**Sessions:**
-- `Ctrl-b ,/.` - Previous/next session
-- `Ctrl-b f` - **Fuzzy find sessions/projects (sesh)**
+**Sessions (sesh):**
+- `Ctrl-b f` - **Fuzzy find sessions/projects**
   - Type instantly to filter
-  - `Enter` - Switch to session
+  - `Enter` - Switch to session (auto-creates if directory selected)
   - `Ctrl-t` - Show only tmux sessions
-  - `Ctrl-x` - Show zoxide frequent dirs (auto-creates sessions)
-  - `Ctrl-d` - Kill selected session
+  - `Ctrl-x` - Show zoxide frequent dirs (auto-creates sessions from dirs)
+  - `Ctrl-k` - Kill selected session
+  - **Creating:** Select any directory → auto-creates session named after dir
+  - **Killing:** Navigate to session → `Ctrl-k` → session killed, list refreshes
 
 **Other:**
 - `Ctrl-b r` - Reload config
