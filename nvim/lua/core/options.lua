@@ -34,6 +34,20 @@ set.history = 200
 set.splitright = true
 set.splitbelow = true
 
+-- Folding (treesitter-based)
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldlevel = 99  -- start with all folds open
+set.foldenable = true
+
+-- Use indent-based folding for JSON/XML (treesitter folds are flat for these)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "json", "xml" },
+  callback = function()
+    vim.opt_local.foldmethod = "indent"
+  end,
+})
+
 -- Searching
 set.hlsearch = true
 set.ignorecase = true
