@@ -10,14 +10,13 @@
 - `<leader>fg` - **Live grep** (search text across project)
 - `<leader>fb` - Find buffers
 - `<leader>fh` - Find help tags
+- `<C-j>/<C-k>` - Navigate results (vim style)
 
 ---
 
 ## File Explorer (NvimTree)
 
-- `<leader>e` - **Toggle file explorer**
-- `<leader>f` - Focus file explorer
-- `<leader>r` - Refresh file explorer
+- `<leader>o` - **Toggle & reveal current file in tree**
 
 **Inside NvimTree:**
 - `a` - Create file/directory
