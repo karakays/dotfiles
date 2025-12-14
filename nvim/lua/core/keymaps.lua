@@ -76,8 +76,7 @@ map('n', '`', ':<C-u>marks<CR>:normal! `', opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Git Fugitive mappings
-map('n', '<leader>gr', ':silent execute "grep! " . shellescape(expand("<cword>")) . " ."<CR>:copen<CR>', opts)
+-- Config editing
 map('n', '<leader>ve', ':split $MYVIMRC<CR>', opts)
 map('n', '<leader>vs', ':source $MYVIMRC<CR><Bar>:AirlineRefresh<CR><Bar>:CtrlPClearAllCaches<CR><Bar>:NERDTreeFocus<cr>gg:NERDTreeRefreshRoot<CR><c-w><c-p>', opts)
 

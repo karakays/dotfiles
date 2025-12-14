@@ -10,7 +10,6 @@
 - `<leader>fg` - **Live grep** (search text across project)
 - `<leader>fb` - Find buffers
 - `<leader>fh` - Find help tags
-- `<leader>gr` - Grep word under cursor
 
 ---
 
@@ -40,10 +39,13 @@
 
 ## LSP & Code
 
-- `<leader>lf` - Format document
 - `gd` - Go to definition
-- `gr` - Go to references
+- `gr` - **Go to references** (all usages)
+- `gi` - Go to implementation
 - `K` - Hover documentation
+- `<leader>rn` - Rename symbol
+- `<leader>ca` - Code actions
+- `<leader>lf` - Format document
 - `<C-Space>` - Trigger completion
 
 ---
