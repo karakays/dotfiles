@@ -5,7 +5,24 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
       config = function()
-        require("telescope").setup()
+        local actions = require("telescope.actions")
+        require("telescope").setup({
+          defaults = {
+            path_display = { "filename_first" },
+            mappings = {
+              i = {
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+                ["<C-q>"] = actions.close,
+              },
+              n = {
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+                ["q"] = actions.close,
+              },
+            },
+          },
+        })
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -21,7 +38,7 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "bash", "java", "json", "kotlin", "lua", "markdown", "python", "yaml" },
+        ensure_installed = { "bash", "java", "json", "kotlin", "lua", "markdown", "python", "xml", "yaml" },
         highlight = {
           enable = true,
         },
@@ -42,13 +59,15 @@ return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("nvim-tree").setup()
-    -- Toggle the NvimTree window
-    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-    -- Focus on NvimTree window (if open)
-    vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>", { desc = "Focus file explorer" })
-    -- Open NvimTree in the current file's directory
-    vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+      require("nvim-tree").setup({
+        sync_root_with_cwd = true,
+        update_focused_file = {
+          enable = true,      -- Auto-highlight current file in tree
+          update_root = true, -- Change tree root to file's directory
+        },
+        view = { width = 35 },
+      })
+      vim.keymap.set("n", "<leader>o", ":NvimTreeFindFileToggle<CR>", { desc = "Reveal current file in tree" })
     end,
   },
 
