@@ -49,11 +49,6 @@ return {
     end,
   },
 
-  -- Kotlin Syntax Highlighting (still useful)
-  {
-    "udalov/kotlin-vim"
-  },
-
   -- File Tree
   {
     "nvim-tree/nvim-tree.lua",

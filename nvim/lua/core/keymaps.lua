@@ -78,13 +78,7 @@ vim.g.maplocalleader = " "
 
 -- Config editing
 map('n', '<leader>ve', ':split $MYVIMRC<CR>', opts)
-map('n', '<leader>vs', ':source $MYVIMRC<CR><Bar>:AirlineRefresh<CR><Bar>:CtrlPClearAllCaches<CR><Bar>:NERDTreeFocus<cr>gg:NERDTreeRefreshRoot<CR><c-w><c-p>', opts)
-
--- Syntax check
-map('n', '<leader>C', ':SyntasticCheck<CR>', opts)
-
--- Syntastic settings
-map('n', '<leader>s', ':SyntasticCheck<CR>', opts)
+map('n', '<leader>vs', ':source $MYVIMRC<CR>', opts)
 
 -- LSP format on demand
 vim.keymap.set('n', '<leader>lf', function()
