@@ -38,7 +38,7 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "bash", "java", "json", "kotlin", "lua", "markdown", "python", "xml", "yaml" },
+        ensure_installed = { "bash", "java", "javascript", "json", "kotlin", "lua", "markdown", "python", "tsx", "typescript", "xml", "yaml" },
         highlight = {
           enable = true,
         },

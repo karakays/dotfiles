@@ -45,6 +45,9 @@
 - `<leader>rn` - Rename symbol
 - `<leader>ca` - Code actions
 - `<leader>lf` - Format document
+- `<leader>ds` - **Document symbols** (outline picker)
+- `<leader>ci` - **Incoming calls** (who calls this function?)
+- `<leader>co` - **Outgoing calls** (what does this function call?)
 - `<C-Space>` - Trigger completion
 
 ---

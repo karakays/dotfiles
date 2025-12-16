@@ -91,4 +91,7 @@ vim.keymap.set('n', '<leader>lf', function()
   vim.lsp.buf.format({ async = true })
 end, { noremap = true, silent = true, desc = 'LSP Format' })
 
+-- Document symbols (outline)
+vim.keymap.set('n', '<leader>ds', '<cmd>Telescope lsp_document_symbols<cr>', { noremap = true, silent = true, desc = 'Document Symbols' })
+
 

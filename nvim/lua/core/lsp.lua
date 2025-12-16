@@ -20,13 +20,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+
+    -- Call hierarchy
+    vim.keymap.set('n', '<leader>ci', telescope.lsp_incoming_calls, opts)  -- who calls this?
+    vim.keymap.set('n', '<leader>co', telescope.lsp_outgoing_calls, opts)  -- what does this call?
   end,
 })
 
 -- Mason setup (LSP installer)
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "jdtls" },
+  ensure_installed = { "pyright", "jdtls", "ts_ls" },
 })
 
 -- Python LSP
@@ -71,6 +75,27 @@ lspconfig.jdtls.setup({
           starThreshold = 9999,
           staticStarThreshold = 9999,
         },
+      },
+    },
+  },
+})
+
+-- TypeScript/JavaScript LSP
+lspconfig.ts_ls.setup({
+  capabilities = capabilities,
+  settings = {
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "all",
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+      },
+    },
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "all",
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
       },
     },
   },
