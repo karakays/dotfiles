@@ -3,6 +3,22 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+-- Diagnostic display configuration
+vim.diagnostic.config({
+  virtual_text = { spacing = 4, prefix = "●" },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = { border = "rounded", source = true },
+})
+
+-- Force diagnostic underline highlights (gruvbox doesn't set these properly)
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = true, sp = '#fb4934' })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { undercurl = true, sp = '#fabd2f' })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { undercurl = true, sp = '#83a598' })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = true, sp = '#8ec07c' })
+
 -- Global LSP keybindings - triggers for ANY LSP that attaches
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
@@ -30,7 +46,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- Mason setup (LSP installer)
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "jdtls", "ts_ls" },
+  ensure_installed = { "pyright", "jdtls", "ts_ls", "gopls" },
 })
 
 -- Python LSP
@@ -75,6 +91,35 @@ lspconfig.jdtls.setup({
           starThreshold = 9999,
           staticStarThreshold = 9999,
         },
+      },
+    },
+  },
+})
+
+-- Go LSP (gopls)
+lspconfig.gopls.setup({
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+        nilness = true,
+        unusedwrite = true,
+        useany = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+      usePlaceholders = true,
+      completeUnimported = true,
+      hints = {
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        constantValues = true,
+        functionTypeParameters = true,
+        parameterNames = true,
+        rangeVariableTypes = true,
       },
     },
   },
