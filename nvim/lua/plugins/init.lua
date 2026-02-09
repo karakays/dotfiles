@@ -56,9 +56,10 @@ return {
     config = function()
       require("nvim-tree").setup({
         sync_root_with_cwd = true,
+        respect_buf_cwd = false,
         update_focused_file = {
-          enable = true,      -- Auto-highlight current file in tree
-          update_root = true, -- Change tree root to file's directory
+          enable = true,       -- Auto-highlight current file in tree
+          update_root = false, -- Keep tree at project root, don't follow into libraries
         },
         view = { width = 35 },
       })
@@ -90,6 +91,20 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+    end,
+  },
+
+  -- Open GitHub URLs for current line
+  {
+    "ruifm/gitlinker.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("gitlinker").setup({
+        mappings = nil,
+        callbacks = { ["github.com"] = require("gitlinker.hosts").get_github_type_url },
+        opts = { action_callback = require("gitlinker.actions").open_in_browser },
+      })
+      vim.keymap.set({ "n", "v" }, "<leader>gy", require("gitlinker").get_buf_range_url, { desc = "Open in GitHub" })
     end,
   },
 

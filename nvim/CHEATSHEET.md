@@ -33,6 +33,7 @@
 
 - `<leader>g` - Git status (fugitive)
 - `<leader>gg` - **LazyGit** (full TUI)
+- `<leader>gy` - **Open line in GitHub** (visual: range)
 
 ---
 
