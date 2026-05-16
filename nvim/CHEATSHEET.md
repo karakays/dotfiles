@@ -31,9 +31,8 @@
 
 ## Git
 
-- `<leader>g` - Git status (fugitive)
 - `<leader>gg` - **LazyGit** (full TUI)
-- `<leader>gy` - **Open line in GitHub** (visual: range)
+- `<leader>gh` - **Open line in GitHub** (visual: range)
 
 ---
 
@@ -67,12 +66,42 @@
 ## Navigation & Editing
 
 - `jk` - Exit insert mode (instead of Esc)
-- `s` - Save file
-- `q` - Quit
-- `<Space>` - Clear search highlight
-- `<CR>` - Create blank line below
+- `<leader>w` - Save file
+- `<leader>q` - Quit
+- `<Esc>` - Clear search highlight (normal mode)
+- `<leader><CR>` - Create blank line below
 - `<C-j>` - Scroll down
 - `<C-k>` - Scroll up
+
+---
+
+## Treesitter Text Objects
+
+Use with any operator (`d`/`c`/`y`/`v`). Includes lookahead — if cursor isn't inside the target, jumps to the next one.
+
+**Functions:**
+- `vaf` / `vif` - Select a/inside **function**
+- `daf` / `dif` - Delete a/inside function
+- `caf` / `cif` - Change a/inside function (great for rewriting bodies)
+- `yaf` / `yif` - Yank a/inside function
+
+**Classes:**
+- `vac` / `vic` - Select a/inside **class**
+- `dac` / `dic` - Delete a/inside class
+
+**Parameters/Arguments:**
+- `vaa` / `via` - Select a/inside **parameter** (`aa` = with comma)
+- `daa` / `dia` - Delete a/inside parameter
+
+**Conditionals & loops:**
+- `vai` / `vii` - Select a/inside **if-statement**
+- `val` / `vil` - Select a/inside **loop**
+
+**Movement (with jump list — `<C-o>` returns):**
+- `]m` / `[m` - Next / previous **function start**
+- `]M` / `[M` - Next / previous function end
+- `]]` / `[[` - Next / previous **class start**
+- `][` / `[]` - Next / previous class end
 
 ---
 

@@ -25,25 +25,62 @@ return {
         })
 
         local builtin = require("telescope.builtin")
-        vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-        vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-        vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-        vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+        vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+        vim.keymap.set("n", "<leader>fg", builtin.live_grep,  { desc = "Live grep" })
+        vim.keymap.set("n", "<leader>fb", builtin.buffers,    { desc = "Buffers" })
+        vim.keymap.set("n", "<leader>fh", builtin.help_tags,  { desc = "Help tags" })
       end,
   },
 
-  -- Treesitter for better syntax highlighting
+  -- Treesitter for better syntax highlighting + syntax-aware text objects
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = { "bash", "go", "gomod", "gosum", "gowork", "java", "javascript", "json", "kotlin", "lua", "markdown", "python", "tsx", "typescript", "xml", "yaml" },
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              ["af"] = "@function.outer",
+              ["if"] = "@function.inner",
+              ["ac"] = "@class.outer",
+              ["ic"] = "@class.inner",
+              ["aa"] = "@parameter.outer",
+              ["ia"] = "@parameter.inner",
+              ["ai"] = "@conditional.outer",
+              ["ii"] = "@conditional.inner",
+              ["al"] = "@loop.outer",
+              ["il"] = "@loop.inner",
+            },
+          },
+          move = {
+            enable = true,
+            set_jumps = true,
+            goto_next_start = {
+              ["]m"] = "@function.outer",
+              ["]]"] = "@class.outer",
+            },
+            goto_next_end = {
+              ["]M"] = "@function.outer",
+              ["]["] = "@class.outer",
+            },
+            goto_previous_start = {
+              ["[m"] = "@function.outer",
+              ["[["] = "@class.outer",
+            },
+            goto_previous_end = {
+              ["[M"] = "@function.outer",
+              ["[]"] = "@class.outer",
+            },
+          },
         },
       })
     end,
@@ -75,16 +112,6 @@ return {
     end,
   },
 
-  -- Git integration (Fugitive still works great!)
-  {
-    "tpope/vim-fugitive",
-    config = function()
-        local keymap = vim.keymap.set
-        local opts = { noremap = true, silent = true, desc = "" }
-        keymap("n", "<space>g", ":G<CR>",     { desc = "Git status" })
-      end,
-  },
-
   -- Lazygit integration
   {
     "kdheepak/lazygit.nvim",
@@ -104,7 +131,7 @@ return {
         callbacks = { ["github.com"] = require("gitlinker.hosts").get_github_type_url },
         opts = { action_callback = require("gitlinker.actions").open_in_browser },
       })
-      vim.keymap.set({ "n", "v" }, "<leader>gy", require("gitlinker").get_buf_range_url, { desc = "Open in GitHub" })
+      vim.keymap.set({ "n", "v" }, "<leader>gh", require("gitlinker").get_buf_range_url, { desc = "Open in GitHub" })
     end,
   },
 
@@ -200,5 +227,29 @@ return {
   "hrsh7th/cmp-nvim-lsp", -- Completion source: LSP
   "L3MON4D3/LuaSnip", -- Snippet engine
   "saadparwaiz1/cmp_luasnip", -- Completion source: snippets
- }
+ },
+
+  -- Keymap discovery popup
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      preset = "modern",
+      delay = 300,
+    },
+    config = function(_, opts)
+      local wk = require("which-key")
+      wk.setup(opts)
+      wk.add({
+        { "<leader>f", group = "find" },
+        { "<leader>g", group = "git" },
+        { "<leader>l", group = "lsp" },
+        { "<leader>c", group = "code/calls" },
+        { "<leader>v", group = "vim config" },
+        { "<leader>m", group = "markdown" },
+        { "<leader>d", group = "document" },
+        { "<leader>r", group = "rename" },
+      })
+    end,
+  },
 }

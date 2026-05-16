@@ -24,7 +24,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufnr = args.buf
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    print("LSP attached: " .. client.name)  -- Debug line
 
     local telescope = require('telescope.builtin')
     local opts = { buffer = bufnr, silent = true }

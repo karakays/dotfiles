@@ -27,58 +27,46 @@ map('i', '<Esc>', '<Nop>', opts)
 -- map('n', '<C-L>', '<C-W>L', opts)
 -- map('n', '<C-H>', '<C-W>H', opts)
 
+-- Leader key mappings
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Save
-map('n', 's', ':w<CR>', opts)
+vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
 
--- Quit
-map('n', 'q', ':q<CR>', opts)
-
--- Soft quit
--- map('n', 'Q', ':q!<CR>', opts)
+-- Quit (q preserved for macros)
+vim.keymap.set('n', '<leader>q', ':q<CR>', { noremap = true, silent = true, desc = 'Quit' })
 
 -- Blank lines on enter
-map('n', '<CR>', 'o<esc>', opts)
-
--- Quickfix <CR> mapping
-vim.cmd([[autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>]])
+vim.keymap.set('n', '<leader><CR>', 'o<esc>', { noremap = true, silent = true, desc = 'Blank line below' })
 
 -- Swap direction word occr
 map('n', '*', '#', opts)
 map('n', '#', '*', opts)
 
 -- Open all folds
-map('n', 'zO', 'zR', opts)
+vim.keymap.set('n', 'zO', 'zR', { noremap = true, silent = true, desc = 'Open all folds' })
 
 -- Tab mappings
-map('n', 'tk', ':tabnext<CR>', opts)
-map('n', 'tj', ':tabprev<CR>', opts)
-map('n', 't0', ':tabfirst<CR>', opts)
-map('n', 't9', ':tablast<CR>', opts)
-map('n', 'tn', ':tabedit<CR>', opts)
-map('n', 'tq', ':tabclose<CR>', opts)
+vim.keymap.set('n', 'tk', ':tabnext<CR>',  { noremap = true, silent = true, desc = 'Next tab' })
+vim.keymap.set('n', 'tj', ':tabprev<CR>',  { noremap = true, silent = true, desc = 'Previous tab' })
+vim.keymap.set('n', 't0', ':tabfirst<CR>', { noremap = true, silent = true, desc = 'First tab' })
+vim.keymap.set('n', 't9', ':tablast<CR>',  { noremap = true, silent = true, desc = 'Last tab' })
+vim.keymap.set('n', 'tn', ':tabedit<CR>',  { noremap = true, silent = true, desc = 'New tab' })
+vim.keymap.set('n', 'tq', ':tabclose<CR>', { noremap = true, silent = true, desc = 'Close tab' })
 
--- Copy to clipboard
-map('v', '<C-c>', ':w !pbcopy<CR><CR>', opts)
-
--- Paste
-map('i', '<C-v>', ':r !pbpaste<CR><CR>', opts)
-
--- Clear hlsearch
-map('n', '<Space>', ':noh<CR><CR>', opts)
+-- Clear hlsearch (Esc in normal mode is unused by default)
+vim.keymap.set('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true, desc = 'Clear search highlight' })
 
 -- Delete to end of line
-map('n', 'D', 'd$', opts)
+vim.keymap.set('n', 'D', 'd$', { noremap = true, silent = true, desc = 'Delete to end of line' })
 
 -- Marks
-map('n', '`', ':<C-u>marks<CR>:normal! `', opts)
-
--- Leader key mappings
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.keymap.set('n', '`', ':<C-u>marks<CR>:normal! `', { noremap = true, silent = true, desc = 'Pick mark' })
 
 -- Config editing
-map('n', '<leader>ve', ':split $MYVIMRC<CR>', opts)
-map('n', '<leader>vs', ':source $MYVIMRC<CR>', opts)
+vim.keymap.set('n', '<leader>ve', ':split $MYVIMRC<CR>',  { noremap = true, silent = true, desc = 'Edit config' })
+vim.keymap.set('n', '<leader>vs', ':source $MYVIMRC<CR>', { noremap = true, silent = true, desc = 'Source/reload config' })
 
 -- LSP format on demand
 vim.keymap.set('n', '<leader>lf', function()
