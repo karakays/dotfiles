@@ -142,7 +142,7 @@ return {
     config = function()
       require("lualine").setup {
         options = {
-          theme = "gruvbox_light",
+          theme = "kanagawa",
           icons_enabled = true,
           section_separators = '',
           component_separators = ''
@@ -183,8 +183,8 @@ return {
       end,
   },
   
-  -- gruvbox color theme
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+  -- kanagawa color theme
+  { "rebelot/kanagawa.nvim", priority = 1000, config = true },
 
   -- Render markdown with visual enhancements
   {

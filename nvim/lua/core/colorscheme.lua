@@ -1,5 +1,5 @@
 --- .config/nvim/lua/core/colorscheme.lua
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme kanagawa-wave")
 
 -- Transparent background (works with terminal transparency)
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
