@@ -1,5 +1,6 @@
 -- init.lua
 require("core.options")
+require("core.filetypes")
 require("core.keymaps")
 require("core.lazy")       -- bootstrap and plugin manager setup
 require("plugins")

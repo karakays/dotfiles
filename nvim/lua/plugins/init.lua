@@ -49,7 +49,7 @@ return {
     },
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "bash", "go", "gomod", "gosum", "gowork", "java", "javascript", "json", "kotlin", "lua", "markdown", "python", "tsx", "typescript", "xml", "yaml" },
+        ensure_installed = { "bash", "go", "gomod", "gosum", "gowork", "helm", "java", "javascript", "json", "kotlin", "lua", "markdown", "python", "tsx", "typescript", "xml", "yaml" },
         highlight = { enable = true },
         indent = { enable = true },
       })
