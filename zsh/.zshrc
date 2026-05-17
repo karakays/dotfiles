@@ -77,6 +77,7 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
 ZSH_TMUX_DEFAULT_SESSION_NAME=init
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true
+ZSH_TMUX_AUTOQUIT=false
 ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
  
 # Which plugins would you like to load?
