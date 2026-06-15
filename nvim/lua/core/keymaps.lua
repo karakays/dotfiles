@@ -47,13 +47,20 @@ map('n', '#', '*', opts)
 -- Open all folds
 vim.keymap.set('n', 'zO', 'zR', { noremap = true, silent = true, desc = 'Open all folds' })
 
--- Tab mappings
+-- Tab/worktree mappings
 vim.keymap.set('n', 'tk', ':tabnext<CR>',  { noremap = true, silent = true, desc = 'Next tab' })
 vim.keymap.set('n', 'tj', ':tabprev<CR>',  { noremap = true, silent = true, desc = 'Previous tab' })
 vim.keymap.set('n', 't0', ':tabfirst<CR>', { noremap = true, silent = true, desc = 'First tab' })
 vim.keymap.set('n', 't9', ':tablast<CR>',  { noremap = true, silent = true, desc = 'Last tab' })
-vim.keymap.set('n', 'tn', ':tabedit<CR>',  { noremap = true, silent = true, desc = 'New tab' })
+vim.keymap.set('n', 'tt', function() require('core.worktree_tabs').pick_tabs() end, { noremap = true, silent = true, desc = 'Find tab' })
+vim.keymap.set('n', 'tw', function() require('core.worktree_tabs').pick_worktrees() end, { noremap = true, silent = true, desc = 'Find git worktree' })
+vim.keymap.set('n', 'tn', function() require('core.worktree_tabs').new_tab_here() end, { noremap = true, silent = true, desc = 'New tab here' })
 vim.keymap.set('n', 'tq', ':tabclose<CR>', { noremap = true, silent = true, desc = 'Close tab' })
+
+-- Buffer mappings; scope.nvim keeps these within the current tab.
+vim.keymap.set('n', ']b', ':bnext<CR>', { noremap = true, silent = true, desc = 'Next buffer' })
+vim.keymap.set('n', '[b', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete buffer' })
 
 -- Clear hlsearch (Esc in normal mode is unused by default)
 vim.keymap.set('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true, desc = 'Clear search highlight' })
@@ -75,5 +82,3 @@ end, { noremap = true, silent = true, desc = 'LSP Format' })
 
 -- Document symbols (outline)
 vim.keymap.set('n', '<leader>ds', '<cmd>Telescope lsp_document_symbols<cr>', { noremap = true, silent = true, desc = 'Document Symbols' })
-
-

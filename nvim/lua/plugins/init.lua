@@ -32,6 +32,17 @@ return {
       end,
   },
 
+  {
+    "tiagovla/scope.nvim",
+    lazy = false,
+    config = function()
+      require("scope").setup({})
+      pcall(function()
+        require("telescope").load_extension("scope")
+      end)
+    end,
+  },
+
   -- Treesitter for better syntax highlighting + syntax-aware text objects
   {
     "nvim-treesitter/nvim-treesitter",
@@ -146,13 +157,20 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
+      local function worktree_name()
+        return vim.fn.fnamemodify(vim.fn.getcwd(-1, 0), ":t")
+      end
+
       require("lualine").setup {
         options = {
           theme = "kanagawa",
           icons_enabled = true,
           section_separators = '',
           component_separators = ''
-        }
+        },
+        sections = {
+          lualine_b = { worktree_name, "branch" },
+        },
       }
     end,
   },
@@ -185,7 +203,22 @@ return {
       version = "*",
       dependencies = 'nvim-tree/nvim-web-devicons',
       config = function()
-        require("bufferline").setup {}
+        require("bufferline").setup {
+          options = {
+            mode = "buffers",
+            diagnostics = "nvim_lsp",
+            separator_style = "thin",
+            show_close_icon = false,
+            offsets = {
+              {
+                filetype = "NvimTree",
+                text = "Files",
+                text_align = "center",
+                separator = true,
+              },
+            },
+          },
+        }
       end,
   },
   
@@ -249,6 +282,7 @@ return {
       wk.add({
         { "<leader>f", group = "find" },
         { "<leader>g", group = "git" },
+        { "<leader>b", group = "buffer" },
         { "<leader>l", group = "lsp" },
         { "<leader>c", group = "code/calls" },
         { "<leader>v", group = "vim config" },

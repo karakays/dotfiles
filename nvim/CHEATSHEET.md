@@ -54,12 +54,22 @@
 
 ## Tabs
 
-- `tn` - New tab
+- `tn` - New tab at current cwd
+- `tw` - Find/open git worktree tab for current repo
+- `tt` - Find open tab
 - `tq` - Close tab
 - `tj` - Previous tab
 - `tk` - Next tab
 - `t0` - First tab
 - `t9` - Last tab
+
+---
+
+## Buffers
+
+- `<leader>fb` - Find buffers in the current tab
+- `]b` / `[b` - Next / previous buffer in the current tab
+- `<leader>bd` - Delete buffer
 
 ---
 
