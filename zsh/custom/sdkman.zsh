@@ -4,5 +4,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export SDKMAN_AUTO_ENV=true
 export SDKMAN_AUTO_ANSWER=true
 
-# Ensure JAVA_HOME is set (jdtls requires this)
-export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
