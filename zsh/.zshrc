@@ -73,7 +73,7 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 ZSH_TMUX_UNICODE=true
 ZSH_TMUX_DEFAULT_SESSION_NAME=init
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true

@@ -1,0 +1,34 @@
+[keys]
+prefix = "ctrl+b"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+detach = "prefix+shift+d"
+close_workspace = "prefix+shift+q"
+settings = "prefix+shift+s"
+reload_config = "prefix+r"
+open_notification_target = "prefix+shift+o"
+copy_mode = "prefix+space"
+last_pane = "prefix+minus"
+split_horizontal = "prefix+s"
+resize_mode = "prefix+shift+r"
+
+[[keys.command]]
+key = "prefix+f"
+type = "popup"
+command = "~/.config/herdr/scripts/space-picker.sh"
+description = "Fuzzy switch or open Space"
+width = "70%"
+height = "60%"
+
+[ui]
+agent_panel_sort = "priority"
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 1
+
+[theme]
+name = "gruvbox-light"
+auto_switch = false
