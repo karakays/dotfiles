@@ -1,3 +1,5 @@
-# Load SSH keys from macOS Keychain
-# Keys must be previously added with: ssh-add --apple-use-keychain ~/.ssh/keyname
-ssh-add --apple-load-keychain 2>/dev/null
+# Manually reload SSH keys from macOS Keychain if the agent loses them.
+# Keys should be registered once with: ssh-add --apple-use-keychain ~/.ssh/keyname
+ssh-load-keychain() {
+  ssh-add --apple-load-keychain "$@"
+}
