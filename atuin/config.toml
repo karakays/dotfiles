@@ -1,0 +1,15 @@
+auto_sync = false
+update_check = false
+search_mode = "fuzzy"
+filter_mode = "global"
+workspaces = true
+secrets_filter = true
+enter_accept = false
+show_preview = true
+inline_height = 20
+
+history_filter = [
+  "^atuin ",
+  "^history$",
+  "^exit$",
+]
