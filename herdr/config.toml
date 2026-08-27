@@ -31,7 +31,7 @@ delivery = "herdr"
 delay_seconds = 1
 
 [theme]
-name = "gruvbox-light"
+name = "catppuccin"
 auto_switch = false
 
 [advanced]
