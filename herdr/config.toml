@@ -31,7 +31,7 @@ delivery = "herdr"
 delay_seconds = 1
 
 [theme]
-name = "catppuccin"
+name = "terminal"
 auto_switch = false
 
 [advanced]
