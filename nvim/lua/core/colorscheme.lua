@@ -1,8 +1,18 @@
---- .config/nvim/lua/core/colorscheme.lua
-vim.cmd("colorscheme kanagawa-wave")
-
 -- Transparent background (works with terminal transparency)
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+require("kanagawa").setup({
+  transparent = true,
+  colors = {
+    theme = {
+      all = {
+        ui = { bg_gutter = "none" },
+      },
+    },
+  },
+  overrides = function(colors)
+    return {
+      NormalFloat = { fg = colors.theme.ui.float.fg, bg = "none" },
+    }
+  end,
+})
+
+vim.cmd("colorscheme kanagawa-wave")
