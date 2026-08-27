@@ -1,3 +1,5 @@
+onboarding = false
+
 [keys]
 prefix = "ctrl+b"
 workspace_picker = "prefix+w"
@@ -22,8 +24,15 @@ description = "Fuzzy switch or open Space"
 width = "70%"
 height = "60%"
 
+[[keys.command]]
+key = "prefix+t"
+type = "plugin_action"
+command = "herdr-navigator.open"
+description = "Jump to anything"
+
 [ui]
 agent_panel_sort = "priority"
+sidebar_collapsed_mode = "hidden"
 
 [ui.toast]
 delivery = "herdr"
@@ -32,3 +41,6 @@ delay_seconds = 1
 [theme]
 name = "gruvbox-light"
 auto_switch = false
+
+[advanced]
+scrollback_limit_bytes = 250000000

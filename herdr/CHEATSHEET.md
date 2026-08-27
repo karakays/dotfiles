@@ -23,6 +23,7 @@ Use one default session with a workspace per repository or active worktree.
 | `Prefix ?` | Show active keybindings |
 | `Prefix Shift-d` | Detach and leave everything running |
 | `Prefix f` | Open the floating fuzzy Space picker |
+| `Prefix t` | Open Herdr Navigator |
 | `Prefix g` | Open Herdr's native session navigator |
 | `Prefix w` | Open workspace navigation |
 | `Prefix b` | Toggle the sidebar |
@@ -57,6 +58,22 @@ session and its processes.
 The picker searches both open Herdr Spaces and zoxide directory history.
 
 `Prefix g` remains Herdr's native workspace/tab/pane/agent navigator.
+
+## Herdr Navigator
+
+| Keys | Action |
+| --- | --- |
+| `Prefix t` | Open Navigator in normal mode |
+| `/` | Clear the query and enter search mode |
+| `Esc` | Leave search mode and keep the filtered results |
+| `j/k` | Select next/previous result in normal mode |
+| `Enter` | Open the selected result |
+
+Install the pinned plugin release with:
+
+```bash
+herdr plugin install thanhdat77/herdr-navigator --ref v0.3.3 --yes
+```
 
 ## Tabs
 
