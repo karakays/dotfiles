@@ -18,14 +18,6 @@ resize_mode = "prefix+shift+r"
 
 [[keys.command]]
 key = "prefix+f"
-type = "popup"
-command = "~/.config/herdr/scripts/space-picker.sh"
-description = "Fuzzy switch or open Space"
-width = "70%"
-height = "60%"
-
-[[keys.command]]
-key = "prefix+t"
 type = "plugin_action"
 command = "herdr-navigator.open"
 description = "Jump to anything"

@@ -22,8 +22,7 @@ Use one default session with a workspace per repository or active worktree.
 | --- | --- |
 | `Prefix ?` | Show active keybindings |
 | `Prefix Shift-d` | Detach and leave everything running |
-| `Prefix f` | Open the floating fuzzy Space picker |
-| `Prefix t` | Open Herdr Navigator |
+| `Prefix f` | Open Herdr Navigator |
 | `Prefix g` | Open Herdr's native session navigator |
 | `Prefix w` | Open workspace navigation |
 | `Prefix b` | Toggle the sidebar |
@@ -46,33 +45,26 @@ session and its processes.
 | `Enter` | Focus the selected workspace |
 | `Esc` | Leave workspace navigation |
 
-## Fuzzy Navigation
-
-| Keys | Action |
-| --- | --- |
-| `Prefix f` | Open the floating fuzzy Space picker ready for typing |
-| `Ctrl-j/Ctrl-k` | Select next/previous result |
-| `Enter` | Focus an existing Space or open a zoxide directory as a Space |
-| `Esc` | Cancel |
-
-The picker searches both open Herdr Spaces and zoxide directory history.
-
-`Prefix g` remains Herdr's native workspace/tab/pane/agent navigator.
-
 ## Herdr Navigator
 
 | Keys | Action |
 | --- | --- |
-| `Prefix t` | Open Navigator in normal mode |
+| `Prefix f` | Open Navigator in normal mode |
 | `/` | Clear the query and enter search mode |
 | `Esc` | Leave search mode and keep the filtered results |
 | `j/k` | Select next/previous result in normal mode |
 | `Enter` | Open the selected result |
+| `Tab` | Cycle source filters |
+| `Ctrl-o` | Toggle preview |
+
+Navigator searches Herdr workspaces, agents, sessions, projects, zoxide
+history, configured roots, remotes, and integrations. `Prefix g` remains
+Herdr's native workspace/tab/pane/agent navigator.
 
 Install the pinned plugin release with:
 
 ```bash
-herdr plugin install thanhdat77/herdr-navigator --ref v0.3.3 --yes
+herdr plugin install thanhdat77/herdr-navigator --ref v0.3.6 --yes
 ```
 
 ## Tabs

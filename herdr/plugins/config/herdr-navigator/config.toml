@@ -1,2 +1,6 @@
 [picker]
 vim_mode = true
+
+[theme]
+name = "catppuccin"
+inherit_herdr = false
