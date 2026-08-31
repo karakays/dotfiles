@@ -55,16 +55,16 @@ args = ["--login"]
 program = "/bin/zsh"
 
 [window]
-decorations = "Transparent"
+decorations = "Full"
 decorations_theme_variant = "Dark"
-dynamic_padding = true
+dynamic_padding = false
 dynamic_title = false
-startup_mode = "Maximized"
-opacity = 0.95
+startup_mode = "Windowed"
+opacity = 0.97
 title = " "
 
 [window.padding]
 x = 0
-y = 20
+y = 0
 
 [mouse]
