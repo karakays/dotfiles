@@ -19,8 +19,8 @@ resize_mode = "prefix+shift+r"
 [[keys.command]]
 key = "prefix+f"
 type = "plugin_action"
-command = "herdr-navigator.open"
-description = "Jump to anything"
+command = "herdr-bar.open"
+description = "Open command bar"
 
 [ui]
 agent_panel_sort = "priority"

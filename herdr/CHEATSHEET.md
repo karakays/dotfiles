@@ -22,7 +22,7 @@ Use one default session with a workspace per repository or active worktree.
 | --- | --- |
 | `Prefix ?` | Show active keybindings |
 | `Prefix Shift-d` | Detach and leave everything running |
-| `Prefix f` | Open Herdr Navigator |
+| `Prefix f` | Open Herdr Bar |
 | `Prefix g` | Open Herdr's native session navigator |
 | `Prefix w` | Open workspace navigation |
 | `Prefix b` | Toggle the sidebar |
@@ -45,26 +45,26 @@ session and its processes.
 | `Enter` | Focus the selected workspace |
 | `Esc` | Leave workspace navigation |
 
-## Herdr Navigator
+## Herdr Bar
 
 | Keys | Action |
 | --- | --- |
-| `Prefix f` | Open Navigator in normal mode |
-| `/` | Clear the query and enter search mode |
-| `Esc` | Leave search mode and keep the filtered results |
-| `j/k` | Select next/previous result in normal mode |
-| `Enter` | Open the selected result |
-| `Tab` | Cycle source filters |
+| `Prefix f` | Open Bar and start typing to search |
+| `Ctrl-j` / `Ctrl-k` | Select next/previous result |
+| `Enter` | Jump to the selected result |
+| `Tab` / `Shift-Tab` | Cycle source filters |
 | `Ctrl-o` | Toggle preview |
+| `Ctrl-r` | Rename the selected tab |
+| `Esc` | Close Bar without changing focus |
 
-Navigator searches Herdr workspaces, agents, sessions, projects, zoxide
-history, configured roots, remotes, and integrations. `Prefix g` remains
-Herdr's native workspace/tab/pane/agent navigator.
+Bar searches active Herdr agents, plain tabs, and workspaces. It does not search
+zoxide history or unopened directories. `Prefix g` remains Herdr's native
+workspace/tab/pane/agent navigator.
 
 Install the pinned plugin release with:
 
 ```bash
-herdr plugin install thanhdat77/herdr-navigator --ref v0.3.6 --yes
+herdr plugin install jeffarese/herdr-bar --ref v0.2.1 --yes
 ```
 
 ## Tabs
