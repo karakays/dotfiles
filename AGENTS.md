@@ -29,6 +29,8 @@ This creates symlinks from the repository directories to the appropriate locatio
 
 **This repository pushes directly to the `master` branch.** There are no pull requests or feature branches - all commits go straight to main.
 
+Do not create or use a git worktree for changes in this repository. Make requested dotfile and local tool configuration changes directly in the main checkout unless the user explicitly requests a worktree.
+
 When committing:
 - Create clear, descriptive commit messages
 - Push changes directly to master after committing
