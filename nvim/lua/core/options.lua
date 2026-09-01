@@ -33,6 +33,27 @@ set.scrolloff = 3
 set.history = 200
 set.splitright = true
 set.splitbelow = true
+set.diffopt = {
+  "internal",
+  "filler",
+  "closeoff",
+  "algorithm:histogram",
+  "indent-heuristic",
+}
+set.fillchars:append({ diff = " " })
+
+vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" }, {
+  callback = function()
+    if vim.wo.diff then
+      vim.opt_local.number = true
+      vim.opt_local.relativenumber = false
+      vim.opt_local.wrap = false
+      vim.opt_local.cursorline = false
+      vim.opt_local.signcolumn = "yes"
+      vim.opt_local.foldcolumn = "0"
+    end
+  end,
+})
 
 -- Folding (treesitter-based)
 set.foldmethod = "expr"
@@ -66,4 +87,3 @@ set.backupdir = vim.fn.expand('~') .. '/.vim/backup//'
 -- Enable syntax highlighting
 vim.opt.termguicolors = true
 vim.cmd('syntax enable')
-
