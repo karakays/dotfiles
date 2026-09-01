@@ -60,7 +60,7 @@ decorations_theme_variant = "Dark"
 dynamic_padding = false
 dynamic_title = false
 startup_mode = "Windowed"
-opacity = 0.97
+opacity = 0.94
 title = " "
 
 [window.padding]
