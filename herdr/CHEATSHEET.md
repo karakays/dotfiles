@@ -67,6 +67,38 @@ Install the pinned plugin release with:
 herdr plugin install jeffarese/herdr-bar --ref v0.2.1 --yes
 ```
 
+## Hunk Reviews
+
+| Keys | Action |
+| --- | --- |
+| `Prefix h` | Review uncommitted working-tree changes |
+| `Prefix Shift-b` | Review committed branch changes against the resolved base |
+| `Prefix Shift-h` | Send unsent review comments to the associated agent |
+
+The Hunk review pane is reused when switching between working-tree and branch
+reviews. Branch review uses `<resolved-base>...HEAD`, so it includes committed
+branch changes but not current uncommitted changes.
+
+The base is resolved from a suitable upstream, then `origin/HEAD`, then the
+first local branch named `main`, `master`, or `trunk`.
+
+Install the plugin with:
+
+```bash
+herdr plugin install jhochenbaum/herdr-hunk-diff --yes
+```
+
+CLI fallbacks:
+
+```bash
+herdr plugin action invoke review --plugin jhochenbaum.hunkdiff
+herdr plugin action invoke review:branch --plugin jhochenbaum.hunkdiff
+herdr plugin action invoke review:staged --plugin jhochenbaum.hunkdiff
+herdr plugin action invoke review:commit --plugin jhochenbaum.hunkdiff
+herdr plugin action invoke review:stash --plugin jhochenbaum.hunkdiff
+herdr plugin action invoke send-review --plugin jhochenbaum.hunkdiff
+```
+
 ## Tabs
 
 | Keys | Action |

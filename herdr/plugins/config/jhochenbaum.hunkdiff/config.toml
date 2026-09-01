@@ -1,0 +1,7 @@
+[review]
+auto_open = false
+reuse_pane = true
+default_target = "working"
+watch = true
+placement = "zoomed"
+exclude_untracked = false

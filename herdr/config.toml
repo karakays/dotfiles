@@ -22,6 +22,24 @@ type = "plugin_action"
 command = "herdr-bar.open"
 description = "Open command bar"
 
+[[keys.command]]
+key = "prefix+h"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.review"
+description = "Review uncommitted changes in Hunk"
+
+[[keys.command]]
+key = "prefix+shift+b"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.review:branch"
+description = "Review current branch against its base in Hunk"
+
+[[keys.command]]
+key = "prefix+shift+h"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.send-review"
+description = "Send Hunk review to agent"
+
 [ui]
 agent_panel_sort = "priority"
 sidebar_collapsed_mode = "hidden"
